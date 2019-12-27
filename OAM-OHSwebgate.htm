@@ -1,0 +1,297 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="OAM-OHSwebgate.htm"><LINK rel=File-List 
+href="OAM-OHSwebgate_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 13.709in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.097in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>OHS/webgate</P></DIV>
+<DIV 
+style="WIDTH: 2.672in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Thursday, 
+September 26, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">9:40 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 13.709in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">A WebGate is a 
+web-server plug-in for Oracle Access Manager (OAM) that intercepts HTTP requests 
+and forwards them to the Access Server for authentication and authorization.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><A 
+href="https://www.ateam-oracle.com/the-ultimate-apacheohs11g-tuning-guide-for-oam11g-webgate">https://www.ateam-oracle.com/the-ultimate-apacheohs11g-tuning-guide-for-oam11g-webgate</A></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Typical</SPAN><SPAN 
+style="FONT-WEIGHT: bold"> setup of webgate/OAM:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>--<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>Webgate sends 302 redirect to the client so that the client will be 
+redirected for authentication.</P>
+<P style="MARGIN: 0in"><IMG src="OAM-OHSwebgate_files/mht43F0(1).tmp" width=849 
+height=562></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">DCC 
+webgate: Detached Credentials Collector</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="OAM-OHSwebgate_files/mht4412(1).tmp" width=859 
+height=497></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="OAM-OHSwebgate_files/mht4434(1).tmp" width=680 
+height=353></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">########################################################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cat 
+/opt/ohs/webgate/ohs/config/np_wg.txt - for <SPAN 
+style="FONT-WEIGHT: bold">versions</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_HOME}/webgate/config/simple<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>- .pem files</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>${OHS_HOME}<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>- 
+webgate.conf/httpd.conf</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">######################################################</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_HOME}/webgate/config:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>cwallet.sso, cwallet.sso.lck, 
+ObAccessClient.xml, oblog_config_wg.xml(do not delete), password.xml, 
+simple(.pem files)</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Re-register the webagnet on OAM server<SPAN 
+style="mso-spacerun: yes">&nbsp; 
+</SPAN></SPAN>(/opt/admin/oam_domain/aserver/oam_domain/output) defined in 
+"ObAccessClient.xml" </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">=&gt; Login to 
+that server copy all files and place as above format</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>copy - .pem to 
+${OHS_HOME}/webgate/config/simple</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>incase of 
+password change: adminconsole - security relms - myrealm - providers - OAM_$ENV 
+- change password - restart all Admin and MS servers </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>hit url on 7777 
+port (non-https port)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">############################################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd ${OHS_HOME}; cp 
+webgate.conf webgate.conf_`date '+%Y-%m-%d-%H.%M.%S'`</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">vi <SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">webgate.conf</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Following is to 
+allow urls with substring containg adc.html or adc.jspx …<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>which interm will be used by LB Health 
+Monitors to set status of a server.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">FROM:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>&lt;LocationMatch "/*"&gt;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.75in">AuthType 
+Oblix</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.75in">require 
+valid-user</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.75in">&lt;/LocationMatch&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">TO:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>&lt;LocationMatch 
+"^.*(?&lt;!\/adc\.html|\/adc\.jspx)$"&gt;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">AuthType 
+Oblix</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">require 
+valid-user</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&lt;/LocationMatch&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">###########################################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">###### <SPAN 
+style="FONT-WEIGHT: bold">Cert Install OHS12c, before running</SPAN> replace 
+hostname and variables ######</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">#Oracle PKI Tool</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#Search and 
+Replace ALL for below....</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#HOSTNAME</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#USERID</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#PASSWORD - get it 
+from team. (password123)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">sudo su - 
+oracle</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">OHS_HOME="/opt/admin/ohs1_domain/config/fmwconfig/components/OHS/ohs1"</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">OHS_COMMON="/opt/ohs/oracle_common/bin"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet create -wallet ${OHS_HOME}/keystores -auto_login</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">PASSWORD</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -dn 'CN=${HOSTNAME}, OU=Inc, O=It, 
+L=Green, ST=CA, C=US' -asym_alg RSA -keysize 2048 -pwd PASSWORD -addext_san 
+DNS:HOSTNAME</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet export -wallet ${OHS_HOME}/keystores -dn 'CN=${HOSTNAME}, OU=Inc, O=It, 
+L=Green, ST=CA, C=US' -request ${OHS_HOME}/keystores/${HOSTNAME}_ohs.csr -pwd 
+PASSWORD </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cp 
+${OHS_HOME}/keystores/${HOSTNAME}_ohs.csr /tmp/</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">chmod 755 
+/tmp/${HOSTNAME}_ohs.csr</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#copy .csr from 
+UNIX box to your local sysatem and run following in CMD prompt</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">******************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">##cd 
+"C:\Users\USERID\Documents"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">##certreq -submit 
+-attrib "Certificatetemplate:OpenSystemsServerCertificateSHA2" -config 
+$CERTHOST\SHA2SubCA3 C:\Users\USERID\Documents\${HOSTNAME}_ohs.csr 
+${HOSTNAME}_ohs.cer</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">******************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#for primary 
+server</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">certreq -submit 
+-attrib "CertificateTemplate: WebServer_Basic_ApprovalReq_1" -config 
+"$CERTHOST\SchSHA2IssuingCA1" ${HOSTNAME}_ohs.csr</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#for secondary 
+server</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">certreq -submit 
+-attrib "CertificateTemplate: WebServer_Basic_ApprovalReq_1" -config 
+"$CERTHOST\SchSHA2IssuingCA2" ${HOSTNAME}_ohs.csr</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#Send a message to 
+Information Security asking them to issue you the certificate</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#copy the 
+generated .cer from WIN to UNIX host's /tmp dir</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#run below on UNIX 
+host.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cp 
+/tmp/${HOSTNAME}_ohs.cer ${OHS_HOME}/keystores</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">*******************</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -trusted_cert -cert 
+/opt/Certificates/MS-Root.cer -pwd PASSWORD</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -trusted_cert -cert 
+/opt/Certificates/MS-Intermediate.cer -pwd PASSWORD</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -user_cert -cert 
+${OHS_HOME}/keystores/${HOSTNAME}_ohs.cer -pwd PASSWORD </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">*******************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#IMPORT 
+Organization Root and issuing Sub certificates into Keystore/wallet:</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -pwd PASSWORD -trusted_cert -cert 
+/opt/Certificates/SNI_CA_Certs/SrSHA2RootCA.crt </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -pwd PASSWORD -trusted_cert -cert 
+/opt/Certificates/SNI_CA_Certs/SrSHA2IssuingCA1.crt </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -pwd PASSWORD -trusted_cert -cert 
+/opt/Certificates/SNI_CA_Certs/SrSHA2IssuingCA2.crt </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#IMPORT Signed 
+HOSTNAME Certificate generated above into Keystore/Wallet</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet add -wallet ${OHS_HOME}/keystores -pwd PASSWORD -trusted_cert -cert 
+/opt/Certificates/FINISH PATH TO DIR/HOSTNAME.cer </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#Validations</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet display -wallet ${OHS_HOME}/keystores -pwd PASSWORD</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">${OHS_COMMON}/orapki 
+wallet display -complete -wallet ${OHS_HOME}/keystores -pwd PASSWORD</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#CONFIGURE SSL for 
+OHS</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd ${OHS_HOME}</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cp ssl.conf 
+ssl.conf.ORIG</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">vi ssl.conf<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>#search for 
+SSLWallet and comment the existing and add below in new line</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">SSLWallet 
+"${OHS_HOME}/keystores"</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">rm 
+/tmp/${HOSTNAME}_ohs.csr<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>#also 
+remove cer from winscp as its user owned</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#Restart the OHS 
+agent</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/opt/ohs/oracle_common/common/bin/wlst.sh 
+/opt/scripts/ohs_control_ohs1_domain.py stopOHS</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/opt/ohs/oracle_common/common/bin/wlst.sh 
+/opt/scripts/ohs_control_ohs1_domain.py startOHS</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd 
+/opt/admin/ohs1_domain/bin; nohup ./startNodeManager.sh &gt; /dev/null 
+2&gt;&amp;1 &amp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

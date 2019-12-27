@@ -1,0 +1,236 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="DS.htm"><LINK rel=File-List 
+href="DS_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.007in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.947in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>DataSources</P></DIV>
+<DIV 
+style="WIDTH: 2.584in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Saturday, 
+September 7, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">3:45 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 11.007in; MARGIN-TOP: 0.176in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">The Java Database 
+Connectivity (JDBC) API is standard for database-independent connectivity 
+between the Java programming language and a wide range of databases.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">The 12c version of 
+the Oracle Thin driver is installed with Oracle WebLogic Server.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+style="FONT-WEIGHT: bold">ojdbc7.jar</SPAN>, ojdbc7_g.jar, and ojdbc7dms.jar for 
+JDK7<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>and<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">ojdbc6.jar</SPAN>, ojdbc6_g.jar, and 
+ojdbc6dms.jar for JDK 6</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">These drivers are installed in 
+  subdirectories of $ORACLE_HOME/oracle_common/modules. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">The manifest in the </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: aqua; mso-highlight: aqua">weblogic.jar</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> file directly or indirectly 
+  includes these files so they load automatically when the server starts. 
+</SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Therefore, you do not need to 
+  add these JDBC drivers to your CLASSPATH. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">For the Oracle driver, the 
+  default is to include ojdbc7.jar</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">TestConnectionsOnReserve</SPAN>="true" 
+- If the connection fails the test, the multi DS uses a connection from the next 
+DS listed in the multi DS</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">No Fail-Over for In-Use 
+  Connections</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">FailoverRequestIfBusy="true"<SPAN 
+  style="mso-spacerun: yes">&nbsp; </SPAN>- routed to the next available data 
+  source</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Generic</SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"> DS:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Generic data sources and their 
+connection pools<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>#provide connection management processes that help keep your system 
+running efficiently.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>You can set options in the data source 
+to suit your applications and your environment.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">GridLink</SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"> DS:</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>--<SPAN style="BACKGROUND: #ccffff"> Oracle Notification Services , Fast 
+Application Notification, Oracle Real Application Cluster</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Oracle RAC FAN feature provides a 
+simplified API for accessing FAN events through a callback mechanism.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>This mechanism enables <SPAN 
+style="BACKGROUND: #ccffff">application code to receive a callback</SPAN> when a 
+FAN event occurs.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>WebLogic JDBC data sources 
+must use the<SPAN style="BACKGROUND: #ccffff"> Oracle JDBC Thin driver 
+11g</SPAN> to create database connections</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>RAC: Scalability/ 
+Availability/ Load balancing/ Failover</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>For using Oracle RAC 
+FAN:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>simplefan.jar file 
+must be present in the classpath, and either ons.jar file must be present in the 
+classpath or </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ONS must be installed and running in the client system.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Multi</SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"> DS:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>An abstraction around a<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>#group of generic data sources that provides load balancing or failover 
+processing.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">JDBC driver types:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>1.<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>JDBC-ODBC bridge driver - Odbc (open database connectivity) and jdbc 
+(java databbase connectivity)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>2.<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>Native-API driver (partially java driver)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>3.<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>Network Protocol driver (middleware driver)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>4.<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>Thin driver (fully java driver)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#getConnection() 
+and connection.close()</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">jdbc - init, min 
+and max (how to handle overload state), netstat -anp | grep port(15221)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">************************************</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 1.875in">MySQL 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL format: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jdbc:mysql://&lt;HOST&gt;:&lt;PORT&gt;/&lt;DATABASE_NAME&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Oracle (thin), 9i, 
+and 10g &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>URL format:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>jdbc:oracle:thin@&lt;HOST&gt;:&lt;PORT&gt;:&lt;DATABASE_NAME&gt;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 2.25in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Driver name: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>oracle.jdbc.driver.OracleDriver 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Setting the Environment for a 
+Third-Party JDBC Driver:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-&gt; Download the JDBC 
+Driver.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>- Unpack the zip or tarball with the JDBC driver jar file and copy the 
+specified file to the WebLogic installation directory, under the 
+${WL_HOME}/server/lib folder. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">2<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-&gt; Now, modify the 
+${WL_HOME}/common/bin/<SPAN style="FONT-WEIGHT: bold">commEnv.sh</SPAN> script 
+and prepend your JAR file to the&nbsp;<SPAN 
+style="FONT-WEIGHT: bold">WEBLOGIC_CLASSPATH</SPAN>&nbsp;env variable.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>- This script sets common environment variables for WebLogic and set the 
+WebLogic classpath with some base libraries from the WebLogic installation 
+directory.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">3<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-&gt; Edit the <SPAN 
+style="FONT-WEIGHT: bold">setDomainEnv.cmd/sh</SPAN> script in that domain's bin 
+directory, and prepend the JAR file to the <SPAN 
+style="FONT-WEIGHT: bold">PRE_CLASSPATH</SPAN> env variable. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>- Your JAR must be located before any client JAR files.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">4<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-&gt; To update this list modify 
+the ${WL_HOME}/server/lib/<SPAN style="FONT-WEIGHT: bold">jdbcdrivers.xml</SPAN> 
+file accordingly, the description of the file is very explanatory.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>XA transactions</SPAN><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>involves a coordinating transaction manager, with one or more databases 
+(or other resources, like JMS) all involved in a single global tx </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Non-XA transactions</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>have no transaction coordinator, and a 
+single resource is doing all its transaction work itself (this is sometimes 
+called local transactions)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>XA datasource</SPAN><SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>is a data source that can participate in an XA global transaction.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Non-XA datasource</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>can't participate in a global 
+transaction </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>(sort of - some people implement what's called a "last participant" 
+optimization that can let you do this for exactly one non-XA 
+item)&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

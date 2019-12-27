@@ -1,0 +1,292 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="GCandDumps.htm"><LINK rel=File-List 
+href="GCandDumps_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 9.776in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.204in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>GC and 
+Dumps</P></DIV>
+<DIV 
+style="WIDTH: 2.584in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Saturday, 
+September 7, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">3:47 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 9.776in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">OOO</SPAN> - native (internal 
+operations) or heap memory (Application related) - <SPAN 
+style="FONT-WEIGHT: bold">JDK<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>--<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN>jcmd 
+&lt;pid&gt; GC.run - <SPAN style="BACKGROUND: aqua; mso-highlight: aqua">run 
+force GC </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Objects are allocated 
+(eg new()) in the “heap” of the memory</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>When new allocations 
+for objects cannot happen in heap, we run into “java.lang.OutOfMemory”</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Static members, 
+class definitions, meta data, etc are stored in <SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Permgen space</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Thread 
+dump</SPAN><SPAN style="BACKGROUND: yellow; mso-highlight: yellow">(</SPAN>JDK): 
+diagnose CPU spikes, deadlocks, poor response times, memory problems, 
+unresponsive applications, and other system problems</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>\\ <SPAN 
+style="FONT-WEIGHT: bold">Analyzing tools Samurai or TDA, JVisualVM, Java 
+Mission Control (JMC), </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1. When you send a 
+SIGQUIT signal to the java process, a thread dump is sent to the stdout</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="BACKGROUND: #ccffff">kill -3 PID</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">2. Using 
+“weblogic.Admin”:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>java weblogic.Admin -url t3://AdminHostName:7001 -username weblogic 
+-password weblogic THREAD_DUMP </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>java weblogic.Admin -url t3://MS1HostName:7003 -username weblogic 
+-password weblogic THREAD_DUMP</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">3.<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Admin Console:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Server<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>–&gt; Monitoring<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>–&gt; Threads<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Click on the Dump Thread Stack</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">4. 
+${JAVA_HOME}/bin/jstack -l<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>threadDump.txt</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">JRockit</SPAN>:<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>jrcmd PID print_threads</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Stack 
+Dump</SPAN><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Force stack dump<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>$jstack -F PID<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>PID_stckdump.log<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Stack memory is used to 
+<SPAN style="BACKGROUND: #ccffff">store local variables and function 
+call</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>- Xss, no memory left in the stack - <SPAN 
+style="FONT-WEIGHT: bold">java.lang.StackOverFlowError</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Heap 
+dump:</SPAN><SPAN style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Eclipse memory analyzing tool<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>//</SPAN>Heap memory is used to <SPAN style="BACKGROUND: #ccffff">store 
+objects in Java</SPAN>/ Java objects are created in Heap</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1.For 
+Hotspot/Oracle JDK, you need to add the following parameters to JAVA_OPTIONS</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-XX:+HeapDumpOnOutOfMemoryError</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-XX:HeapDumpPath=&lt;path&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">2.Jmap, jmap -heap 
+PID</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: #ccffff">$JAVA_HOME/bin/jmap 
+-dump:format=b,file=${FILE_NAME}.hprof<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>&lt;PID&gt;</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: #ccffff">$JAVA_HOME/bin/jmap -J-d64 
+-dump:format=b,file=${FILE_NAME}.hprof &lt;PID&gt; </SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>Note: 
+use -J-d64 if JVM is 64 Bit Jvm “jmap -J-d64 -heap pid”</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Garbage collection 
+is a mechanism provided by JVM to reclaim heap space from objects which are 
+eligible</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">JRockit: </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-jrcmd &lt;PID&gt; 
+hprofdump filename=name_of_dump_file </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">weblogic@p1 =&gt; 
+<SPAN style="BACKGROUND: yellow; mso-highlight: yellow">jmap</SPAN> -heap 
+30707</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Attaching to 
+process ID 30707, please wait...</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Debugger attached 
+successfully.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Server compiler 
+detected.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">JVM version is 
+24.72-b04</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">using thread-local 
+object allocation.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Garbage-First (G1) 
+GC with 8 thread(s)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Heap 
+Configuration:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>MinHeapFreeRatio = 40</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>MaxHeapFreeRatio = 70</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>MaxHeapSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 8589934592 
+(8192.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>NewSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>= 1363144 (1.2999954223632812MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>MaxNewSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 
+17592186044415 MB</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>OldSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>= 5452592 (5.1999969482421875MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>NewRatio<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>= 2</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>SurvivorRatio<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>= 8</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>PermSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>= 268435456 (256.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>MaxPermSize<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 3221225472 
+(3072.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>G1HeapRegionSize = 4194304 
+(4.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Heap Usage:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">G1 Heap:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>regions<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>= 2048</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>capacity = 8589934592 
+(8192.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>used<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 4871539656 
+(4645.862251281738MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>free<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 3718394936 
+(3546.1377487182617MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>56.71218568459153% used</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">G1 Young 
+Generation:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Eden Space:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>regions<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>= 246</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>capacity = 4072669184 
+(3884.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>used<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 1031798784 
+(984.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>free<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 3040870400 
+(2900.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>25.334706488156538% used</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Survivor 
+Space:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>regions<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>= 2</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>capacity = 8388608 (8.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>used<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 8388608 (8.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>free<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 0 (0.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>100.0% used</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">G1 Old 
+Generation:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>regions<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>= 915</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>capacity = 4508876800 
+(4300.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>used<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 3831352264 
+(3653.8622512817383MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>free<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 677524536 
+(646.1377487182617MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>84.97354072748229% used</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Perm 
+Generation:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>capacity = 528482304 (504.0MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>used<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 524754376 
+(500.4447708129883MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>free<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>= 3727928 
+(3.5552291870117188MB)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>99.29459738352942% used</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">488353 interned 
+Strings occupying 94776608 bytes.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

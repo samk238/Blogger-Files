@@ -1,0 +1,481 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="GCandDumps-HeapGen.htm"><LINK rel=File-List 
+href="GCandDumps-HeapGen_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 12.861in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 3.436in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Heap 
+Generations and GC</P></DIV>
+<DIV 
+style="WIDTH: 2.634in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: gray; MARGIN: 0in">Thursday, 
+December 19, 2019</P>
+<P style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: gray; MARGIN: 0in">4:02 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 12.696in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0.165in">
+<P 
+style="FONT-SIZE: 16pt; MARGIN-BOTTOM: 8pt; FONT-FAMILY: Calibri; MARGIN-TOP: 0pt"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold">Heap Generations for 
+Garbage Collection in Java</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Java objects are 
+created in Heap.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Heap</SPAN> is divided into three parts or generations 
+for the sake of garbage collection in Java,</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Young generation</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Tenured or Old Generation</SPAN> 
+
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Perm Area of the heap. 
+  &nbsp;</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">New objects are 
+created by young generation and subsequently moved to the old generation.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">New Generation is 
+further divided into three parts known as </P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Eden space</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Survivor 1</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Survivor 2 space. 
+</SPAN></LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">When an object 
+first created in heap its gets created in new generation inside Eden space and 
+after subsequent minor garbage collection if an object survives its gets moved 
+to survivor 1 and then survivor 2 before major garbage collection moved that 
+object to old or tenured generation.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><A href="http://samk238.blogspot.com/"><IMG 
+alt="heap structure and generation in Java for GC" 
+src="GCandDumps-HeapGen_files/mht3306(1).tmp" width=640 height=346></A></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Whenever Major 
+garbage collection occurs application threads stop during that period which will 
+reduce application’s performance and throughput.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">It's all automatic 
+as you cannot force garbage collection in Java</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold">Important Points about JVM 
+Options:</SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">Boolean</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> JVM options&nbsp;can 
+  be&nbsp;turned</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold"> on with 
+  -XX:+</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> and&nbsp;can 
+  be&nbsp;turned</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold"> off with 
+  -XX:-</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">Numeric</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> JVM Options can be&nbsp;set 
+  with </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">-XX:=</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> Numbers can include 'm' or 'M' 
+  for megabytes, 'k' or 'K' for kilobytes, and 'g' or 'G' for gigabytes (for 
+  example, 32k is the same as 32768).</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">String</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> JVM options&nbsp;can 
+  be&nbsp;set&nbsp;by using&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">-XX:=</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">&nbsp;and&nbsp;usually used to 
+  specify a file, a path, or a list of commands.</SPAN> </LI></UL>
+<P 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "Trebuchet MS"; COLOR: black; MARGIN: 0in'>&nbsp;</P>
+<P style="MARGIN: 0in"><IMG 
+alt=http://4.bp.blogspot.com/-KMPS7glbJhY/T8cc_8QtQqI/AAAAAAAAAX8/hmMqLBx7m4k/s1600/Hotspot2_JVM_Parameters_GC_Heap.png 
+src="GCandDumps-HeapGen_files/mht3328(1).tmp" width=732 height=418></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold"></SPAN>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG src="GCandDumps-HeapGen_files/mht334B(1).tmp" 
+width=647 height=285></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold">GC startup args</SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xms8192m -Xmx8192m </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:PermSize=256m 
+  -XX:MaxPermSize=768m </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">UseG1GC 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:MaxGCPauseMillis=200 </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-verbose:class|gc|jni </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+PrintGCDetails 
+  -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xloggc:/app/oracle/acme/osbdomain/servers/101_osb1/logs/101_osb1_gc.log 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+UseGCLogFileRotation 
+</SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:NumberOfGCLogFiles=10 
+</SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:GCLogFileSize=1000K</SPAN> 
+  </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Create verbose 
+outputs by using the command-line option -Xverbose; </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Ex: 
+“-Xverbose:memdbg,gcpause,gcreport” will show memory management data like 
+garbage collection frequency and duration, “-Xverbose:memdbg” will also show the 
+reason why each garbage collection was started. This will help you study the 
+garbage collection behavior.</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xverbose:memory,gc,gcreport,gcpause,memdbg 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xverbosetimestamp </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xverboselog:/app/oracle/acme/osbdomain/servers/a0001_osb1/logs/a0001_osb1_gc.log 
+  </SPAN></LI></UL>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">----------------</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+HeapDumpOnOutOfMemoryError 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:HeapDumpPath=/app/oracle/acme/osbdomain/servers/001_osb1/logs/hprof-dumps</SPAN> 
+  </LI></UL>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-----------------</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xns2048m </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Xgc:genconpar </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XXkeepAreaRatio:25 </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XpauseTarget=200ms </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XXgcThreads:8 </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Dweblogic.SelfTuningThreadPoolSizeMin=100 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Dweblogic.SelfTuningThreadPoolSizeMax=200 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-Dcom.bea.wli.sb.pipeline.RouterRuntimeCache.size=500</SPAN> 
+  </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold">JFR startup 
+args</SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+UnlockCommercialFeatures</SPAN> 
+
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:+FlightRecorder </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">-XX:StartFlightRecording=duration=0s,filename=/app/oracle/acme/osbdomain/servers/101_osb1/logs/101_osb1.jfr,maxage=300s,maxsize=10M</SPAN> 
+  </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline; FONT-WEIGHT: bold">Types of Garbage Collector 
+in Java</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Java Runtime (J2SE 
+5) provides various types of GC’s in Java which you can choose based on your 
+application's performance requirement. Java 5 adds three additional garbage 
+collectors except serial garbage collector. Each is generational garbage 
+collector which has been implemented to increase the throughput of the 
+application or to reduce garbage collection pause times.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline">Throughput Garbage Collector: </SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">This garbage collector in Java 
+  uses a parallel version of the young generation collector. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">It is used if 
+  the&nbsp;-XX:+UseParallelGC&nbsp;option is passed to the runtime 
+  via&nbsp;</SPAN><A 
+  href="http://javarevisited.blogspot.sg/2011/11/hotspot-jvm-options-java-examples.html"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">JVM command line 
+  options</SPAN></A><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">&nbsp;. 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">The tenured generation collector 
+  is same as the serial collector</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline">Concurrent low pause/ Concurrent Mark Sweep 
+Garbage collector: </SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">This Collector is used if the 
+  -Xingc or -XX:+UseConcMarkSweepGC is passed on the command line. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">The concurrent collector is used 
+  to collect the tenured generation and does most of the collection concurrently 
+  with the execution of the application. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">The </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">application 
+  is paused for short</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> 
+  periods during the collection. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">A parallel version of the young 
+  generation copying collector is used with the concurrent collector. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">This is most widely used garbage 
+  collector in java and it uses an algorithm to first mark object which needs to 
+  collect when garbage collection triggers.</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline"></SPAN>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="TEXT-DECORATION: underline">The Incremental (Sometimes called train) low 
+pause collector: </SPAN></P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">This collector is used only if 
+  -XX:+UseTrainGC is passed on the command line. </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">This garbage collector has not 
+  changed since the java 1.4.2 and is currently not under active development. 
+  </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">It will not be supported in 
+  future releases so avoid using this and please see 1.4.2 GC Tuning document 
+  for information on this collector.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">It’s not recommended to use this 
+  garbage collector in java.</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">An important point to note is 
+that</SPAN>:&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-XX:+UseParallelGC&nbsp;should 
+not be used with&nbsp;-XX:+UseConcMarkSweepGC</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-XX:NewRatio=3&nbsp;means 
+that the ratio of the young and tenured generation is 1:3 , you got to be 
+careful on sizing this generation.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "Trebuchet MS"; COLOR: black; MARGIN: 0in'>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1) The main 
+difference between heap and stack</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Stack memory is used to store 
+  local variables and function call </SPAN>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Stack which can be specified 
+  using -Xss JVM parameter</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">If there is no memory left in 
+  the </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">stack 
+  </SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">for storing 
+  function call or local variable, JVM will throw </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">java.lang.StackOverFlowError</SPAN> 
+  </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Heap memory is used to store 
+  objects in Java. No matter, where the object is created in code e.g. as a 
+  member variable, local variable or class variable, they are always created 
+  inside heap space in Java.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Heap size of Java program using 
+  JVM option -Xms and -Xmx </SPAN></LI></UL>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">-Xms 
+is starting size of the heap and</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">-Xmx 
+is a maximum size of java heap</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P style="MARGIN: 0in"><IMG src="GCandDumps-HeapGen_files/mht336D(1).tmp" 
+width=482 height=203></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">If there is no more </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">heap 
+  </SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">space for creating 
+  an object, JVM will throw </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">java.lang.OutOfMemoryError</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">: Java Heap Space.</SPAN> 
+</LI></UL>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="FONT-WEIGHT: bold">Types:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">1) 
+The java.lang.OutOfMemoryError: <SPAN style="FONT-WEIGHT: bold">Java heap</SPAN> 
+space</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">2) 
+The java.lang.OutOfMemoryError: <SPAN style="FONT-WEIGHT: bold">PermGen</SPAN> 
+space</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Permanent generation</SPAN> of the heap is used to 
+store String pool and various Metadata required by JVM related to Class, method 
+and other java primitives.</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Another reason is if any thread 
+  started by the application doesn't exit when you undeploy your 
+  application.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">So the conclusion is to avoid 
+  using "-Xnoclassgc" in the J2EE environment especially with AppServer.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">An important point to remember 
+  is that it doesn't depend on –Xmx value so no matter</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold"> how big your 
+  total heap size you can run OutOfMemory in perm space</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">The good thing is you can 
+  specify the size of permanent generation using JVM options "-XX: PermSize" 
+  and<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>"-XX: MaxPermSize" based on 
+  your project need.</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1) Visualgc - 
+Visualgc stands for Visual Garbage Collection Monitoring Tool and you can attach 
+it to your instrumented hotspot JVM</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Garbage collection is a 
+mechanism provided by JVM to </SPAN><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">reclaim</SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"> heap space</SPAN> from 
+objects which are eligible for Garbage collection</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Garbage Collection in Java is 
+  carried by a daemon thread called Garbage Collector.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Methods like </SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; FONT-WEIGHT: bold">System.gc() 
+  and Runtime.gc()</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> 
+  which is used to send request of GC to JVM but it’s not guaranteed that GC 
+  will happen.</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Garbage collection 
+works by employing several GC algorithm</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Mark and Sweep. </SPAN></LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">There are 
+different kinds of garbage collector available in Java to collect different area 
+of heap memory </P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Serial</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Parallel</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Concurrent garbage collector in 
+  Java.</SPAN> </LI></UL>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">JVM&nbsp;provides 
+memory management, developers only care about creating an object and they don't 
+care about cleaning up</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">That is done by the garbage 
+  collector, but it can only collect objects which have no live strong reference 
+  or it's not reachable from any thread.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">If an object, which is supposed 
+  to be collected but still lives in memory due to unintentional strong 
+  reference then it's known as a memory leak in Java.&nbsp;ThreadLocal variables 
+  in Java web application&nbsp;can easily cause the memory leak.</SPAN> 
+</LI></UL></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

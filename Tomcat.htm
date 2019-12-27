@@ -1,0 +1,384 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="Tomcat.htm"><LINK rel=File-List 
+href="Tomcat_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 13.636in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.391in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Tomcat</P></DIV>
+<DIV 
+style="WIDTH: 2.565in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Sunday, 
+September 8, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">10:00 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 13.45in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0.186in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Tomcat 6: 
+webapps</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">JDBC: it is 
+configured in the **context.xml file of the web application**, have to specify 
+the **factory** attribute and set the value to 
+**org.apache.tomcat.jdbc.pool.DataSourceFactory**,<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>META-INF/services/java.sql.Driver</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; MARGIN: 0in"><SPAN 
+style="FONT-FAMILY: Calibri">==&gt;<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>From </SPAN><A href="http://tomcat.apache.org/"><SPAN 
+style="FONT-FAMILY: Calibri">http://tomcat.apache.org</SPAN></A><SPAN 
+style="FONT-FAMILY: Calibri"> </SPAN><SPAN 
+style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN style="FONT-FAMILY: Calibri"> 
+Select "Downloads" </SPAN><SPAN 
+style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN style="FONT-FAMILY: Calibri"> 
+"Tomcat 6.0" </SPAN><SPAN style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN 
+style="FONT-FAMILY: Calibri"> "6.0.xx" </SPAN><SPAN 
+style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN style="FONT-FAMILY: Calibri"> 
+"Binary Distributions" </SPAN><SPAN 
+style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN style="FONT-FAMILY: Calibri"> 
+"Core" </SPAN><SPAN style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN 
+style="FONT-FAMILY: Calibri"> "zip" </SPAN><SPAN 
+style='FONT-FAMILY: "Cambria Math"'>⇒</SPAN><SPAN style="FONT-FAMILY: Calibri"> 
+"apache-tomcat-6.0.xx.zip"</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">==&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Unzip the above and refer to the Tomcat 
+installed directory as $CATALINA_HOME or %CATALINA_HOME%, rename the Tomcats 
+installed directory to a shorter name (says c:\Tomcat6). </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">==&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Environment Variable: JAVA_HOME and set 
+it to the JDK installed directory</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">==&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Configuring <SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">$CATALINA_HOME\conf\server.xml</SPAN> 
+: </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">TCP 
+Port Number: default 8080, you may choose any number between 1024 and 65535 to 
+run your Tomcat Test server.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.75in">&lt;Connector 
+port="8080" protocol="HTTP/1.1" connectionTimeout="20000" maxThreads="400" 
+redirectPort="8443" /&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">It is recommended 
+that you store your application under $CATALINA_HOME/webapps, In this case, you 
+do not have to write the &lt;Context&gt; explicitly.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">##Context: 
+A web context is simply a web application running under Tomcat Server</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">#&lt;Context 
+path="/ws" docBase="d:/workshop" reloadable="true"&gt;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">#=&gt;The 
+"path" attribute refers to the URL Path: <A 
+href="http://hostname:8080/ws">http://hostname:8080/ws</A></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">#=&gt;The 
+"docbase" attribute refers to the Document Base Directory (also known as the 
+Context Root) in your server’s file system where you store your applications 
+codes</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">#=&gt;Use 
+Unix-style forward slash '/' as the directory separator in the configuration 
+file, instead of Window-sytle back slash '\'</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">#=&gt;The 
+attribute reloadable="true" asks tomcat to monitor your servlets for changes, 
+and automatically reload the servlets if changes is 
+detected&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Configuring 
+"<SPAN style="BACKGROUND: yellow; mso-highlight: yellow">conf\web.xml</SPAN>" 
+and "<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">conf\context.xm</SPAN>l" for 
+"Invoker Servlet"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>web.xml :<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Enable the 
+Directory Listing</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>web.xml :<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Enable 
+"Invoker Servlet" and Specify its URL Mapping</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>context.xml :<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Enable privilege for "Invoker 
+Servlet"</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">The 
+purpose of the<SPAN style="FONT-WEIGHT: bold">&nbsp;Invoker 
+Servlet</SPAN>&nbsp;is to allow a web application to dynamically register 
+new&nbsp;servlet definitions&nbsp;that correspond with 
+a&nbsp;&lt;servlet&gt;&nbsp;element in the&nbsp;/WEB-INF/web.xml&nbsp;deployment 
+descriptor, and execute requests utilizing the new servlet definitions.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Start/Stop</SPAN> the Tomcat 
+Server</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$CATALINA_HOME\bin\startup.bat</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$CATALINA_HOME\bin\shutdown.bat</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$CATALINA_HOME\conf\tomcat-users</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Java 
+Servlet JAR file: </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Servlet API is needed to compile Java 
+servlet, so copy as below...</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$CATALINA_HOME\lib\servlet-api.jar into 
+your JDKs extension directory $JAVA_HOME\jre\lib\ext</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Alternatively, you could include the 
+Servlet jar- file in the CLASSPATH.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Logging:</SPAN> Check the log 
+files (at $CATALINA_HOME\logs)</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>conf/<SPAN style="FONT-WEIGHT: bold">logging.properties</SPAN> and 
+conf/server.xml for the access log </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>( if not, In that case, just put<SPAN 
+style="FONT-WEIGHT: bold">&nbsp;log4j.jar&nbsp;and&nbsp;log4j.properties</SPAN>&nbsp;into&nbsp;WEB-INF/lib&nbsp;and&nbsp;WEB-INF/classes&nbsp;of 
+your web application)</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Delete $CATALINA_BASE/conf/logging.properties to prevent 
+java.util.logging generating zero length log files</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.75in" 
+type=disc>
+  <LI 
+  style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: #242729"><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">catalina.out</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white">&nbsp;is 
+  the container log file</SPAN> 
+  <LI 
+  style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: #242729"><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">localhost_access</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white">&nbsp;(only 
+  one defined in server.xml) the access log (= all requests like in 
+  httpd)</SPAN> 
+  <LI 
+  style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: #242729"><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">localhost</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white">&nbsp;the 
+  log of the host</SPAN> 
+  <LI 
+  style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px; COLOR: #242729"><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">host-manager</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white">&nbsp;and&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">manager</SPAN><SPAN 
+  style="FONT-SIZE: 11.25pt; FONT-FAMILY: Calibri; BACKGROUND: white">&nbsp;the 
+  logs of the related web applications</SPAN> </LI></UL>
+<P 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; COLOR: #242729; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; COLOR: #242729; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #eff0f1"># log on the host 
+"localhost"<BR>org.apache.catalina.core.ContainerBase.[Catalina].[localhost].xxx</SPAN></P>
+<P 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; COLOR: #242729; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; COLOR: #242729; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #eff0f1"># log on the host "localhost" for the webapp 
+foo<BR>org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/foo].xxx</SPAN></P>
+<P 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; COLOR: #242729; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">More generally the 
+pattern is:</P>
+<P style="MARGIN: 0in"><SPAN 
+style="FONT-SIZE: 9.75pt; FONT-FAMILY: Consolas; BACKGROUND: #eff0f1; COLOR: #242729">org.apache.catalina.core.ContainerBase.[${engine}].[${host}].[${context}]<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Side note: 
+${context} is "/" for the root context.</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Start 
+the tomcat in the debugging mode:</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Running ***catalina.bat debug*** and 
+type "run" in the "jdb" prompt</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Deploying</SPAN> Web 
+Applications in Tomcat:</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Create a new Context: </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>Create a directory 
+under<SPAN style="BACKGROUND: yellow; mso-highlight: yellow"> 
+$CATALINA_HOME\webapps and move your application codes under this 
+directory</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>A context will be created 
+automatically based on name of the directory.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Create the directory structure for the 
+new context:</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>Directory that your 
+application resides is called the context root or document base directory</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.75in">Create 
+a directory called "WEB-INF" under the context root - keep your applications 
+configuration files such as ***web.xml***.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 1.125in">"classes" 
+under "WEB-INF". This is where you keep all the Java classes such as 
+servlets.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 1.125in">"lib" 
+under "WEB-INF". This is where you keep the jar files and native libraries.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 1.125in">"src" 
+under "WEB-INF", for keeping the source files. - Optional</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">A <SPAN 
+style="FONT-WEIGHT: bold">Context</SPAN> is what Tomcat calls a web 
+application.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">In order to 
+configure a Context within Tomcat a<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"> Context Descriptor</SPAN> is 
+required. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-- It is simply an XML file that 
+contains Tomcat related configuration for a Context, e.g naming resources or 
+session manager configuration.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-- In <SPAN 
+style="BACKGROUND: #33cccc">earlier</SPAN> versions of Tomcat the content of a 
+Context Descriptor configuration was often stored within Tomcat's primary 
+configuration file <SPAN style="BACKGROUND: #33cccc">server.xml</SPAN> but this 
+is now discouraged (although it currently still works).</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-- Context Descriptors not only help 
+Tomcat to know how to configure Contexts but other tools such as the <SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Tomcat Manager and TCD</SPAN> 
+often use these Context Descriptors to perform their roles properly.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">The locations for 
+Context Descriptors are:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>--1.<SPAN 
+style="mso-spacerun: yes">&nbsp; 
+</SPAN>$CATALINA_BASE/conf/[enginename]/[hostname]/[webappname].xml</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>--2.<SPAN 
+style="mso-spacerun: yes">&nbsp; 
+</SPAN>$CATALINA_BASE/webapps/[webappname]/META-INF/<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">context.xml</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>-- Files 
+in (1) are named [webappname].xml but files in (2) are named context.xml. If a 
+Context Descriptor is not provided for a Context, Tomcat configures the Context 
+using default values.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 1.125in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">==&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Running Tomcat as a Windows 
+Service:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">cd 
+$CATALINA_HOME\bin</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">$CATALINA_HOME\bin&gt; 
+service install</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Installing 
+the service 'Tomcat6' ...</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Using 
+CATALINA_HOME:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN>d:\tomcat-6.0.20</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Using 
+CATALINA_BASE:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN>d:\tomcat-6.0.20</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Using 
+JAVA_HOME:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>d:\jdk1.6</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Using 
+JVM:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>d:\jdk1.6\jre\bin\server\jvm.dll</P>
+<P 
+style="FONT-SIZE: 8pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">The 
+service 'Tomcat6' has been installed.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">$CATALINA_HOME\bin&gt; 
+tomcat6w</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">$CATALINA_HOME\bin&gt; 
+tomcat6w //MS//</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">net 
+start tomcat6</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">net 
+stop tomcat6</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">$CATALINA_HOME\bin&gt; 
+service remove</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">The 
+service 'Tomcat6' has been removed</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="Patch.htm"><LINK rel=File-List 
+href="Patch_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.563in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.292in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Patch 
+Overview</P></DIV>
+<DIV 
+style="WIDTH: 2.565in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Sunday, 
+September 8, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">10:11 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 11.563in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">For Versions Prior 
+10.3 - <SPAN style="FONT-WEIGHT: bold">bsu<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>$MW_HOME/utils/bsu/bsu.sh -report</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">For weblogic 12c 
+and above - <SPAN style="FONT-WEIGHT: bold">Opatch<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>$MW_HOME/OPatch/opatch lspatches</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">If you are <SPAN 
+style="BACKGROUND: aqua; FONT-WEIGHT: bold; mso-highlight: aqua">not aware 
+of</SPAN> what is your MW_HOME and what is your WL_HOME.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Look for the 
+weblogic.jar file in your filesystem</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">$ find /apps -name 
+"weblogic.jar"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Sample OP: 
+/apps/oracle-weblogic/wls12213/wlserver/server/lib/weblogic.jar</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/apps/oracle-weblogic/wls12213/wlserver<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>----<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>is<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="FONT-WEIGHT: bold">WL_HOME</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/apps/oracle-weblogic/wls12213<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>----<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>is <SPAN 
+style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>MW_HOME</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">BSU</SPAN>:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Verfiy</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./bsu.sh -<SPAN 
+style="BACKGROUND: #ccffff">view </SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>-patch_download_dir=$MW_HOME/utils/bsu/cache_dir<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>-prod_dir=$WL_HOME<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: #ccffff">-status=applied</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-verbose</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Apply:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cp -Rf 
+/app/binaries/Patches/WLS/${PATCH_NUMBER}/*<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>$MW_HOME/utils/bsu/cache_dir</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./bsu.sh -<SPAN 
+style="BACKGROUND: #ccffff">install</SPAN><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>-patch_download_dir=$MW_HOME/utils/bsu/cache_dir<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-patchlist='${PATCH_LIST}'<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-prod_dir=$WL_HOME<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-verbose -log=error.txt</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Rollback:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./bsu.sh -<SPAN 
+style="BACKGROUND: #ccffff">remove</SPAN><SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>-patch_download_dir=$MW_HOME/utils/bsu/cache_dir<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-patchlist='${PATCH_LIST}'<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-verbose</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">***************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">Opatch:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Verfiy:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./opatch <SPAN 
+style="BACKGROUND: #ccffff">lsinventory</SPAN><SPAN style="COLOR: red"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN>before_`hostname`_`date +%Y%m%d`<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-and-<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>after_`hostname`_`date 
++%Y%m%d`</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Apply:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd 
+${PATCH_NUMBER}</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./opatch <SPAN 
+style="BACKGROUND: #ccffff">apply</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>####Optional:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Oracle 
+Configuration Manager (OCM)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>${ORACLE_HOME}/OPatch/ocm/bin/emocmrsp -no_banner&nbsp;-output&nbsp; 
+/tmp/ocm.rsp</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Add email and 
+password for oracle support, if needed provide them, if not just press enter and 
+response will be saved in the .rsp file, which can be reffered in future 
+patches…</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>./opatch <SPAN 
+style="BACKGROUND: #ccffff">apply<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN></SPAN><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;</SPAN>-silent<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-ocmrf<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>/tmp/ocm.rsp</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">#Rollback:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd 
+${PATCH_NUMBER}</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">./opatch <SPAN 
+style="BACKGROUND: #ccffff">rollback</SPAN> -id ${PATCH_NUMBER} -silent</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">***************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #ffff99">oom</SPAN> - while doing bsu patch -- we will set 
+min and mix mem args in bsu.sh file - MEM_ARGS="-Xms256m -Xmx1024m"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">###################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #ffff99">Interim Patch:<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></SPAN>A patch containing one or 
+more fixes made available to customers who cannot wait until the next patch set 
+or new product release to get a fix.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>aka:<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>PSE, MLR, Exception 
+release, <SPAN style="FONT-WEIGHT: bold">One-Off</SPAN>, x-fix, <SPAN 
+style="FONT-WEIGHT: bold">Hotfix</SPAN>, Security One-Off</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">###################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #ffff99">Bundle Patch:<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN></SPAN>An iterative, cumulative patch that is issued between patch sets. 
+Bundle patches usually include only fixes, but some products may include minor 
+enhancements.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Ex: Database Windows Bundles and SOA Bundle Patches.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>aka:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Maintenance Pack, 
+Service Pack, MLRs, <SPAN style="FONT-WEIGHT: bold">Cumulative Patch</SPAN>, 
+Update Release</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #ffff99">Security Patch Update (SPU):<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></SPAN>An iterative, cumulative 
+patch consisting of security fixes. Formerly known as Critical Patch Update.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Note: The program name which delivers SPUs will still be called Critical 
+Patch Update, as defined below:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Critical Patch Update: Oracle's program for quarterly release of security 
+fixes. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Patches released as part of this program may be Patch Set Updates, 
+Security Patch Updates, and Bundle Patches. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Regardless of the patch type, the patches are cumulative.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>aka: Critical Patch Updates, CPUs</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #ffff99">Patch Set Updates (PSU):<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN>Patch Set Updates are 
+used to patch Oracle WebLogic Server only.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">released on a 
+quarterly basis, following the same schedule as the Critical Patch Updates 
+(CPUs).</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">These come out the 
+closest Tuesday to the 15th of the <SPAN style="FONT-WEIGHT: bold">months of 
+January, April, July and October</SPAN>.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Is intended to 
+address the top fifty critical bugs affecting the broad customer base.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Segoe UI"; COLOR: black; MARGIN: 0in'><SPAN 
+style="BACKGROUND: #99ccff">Download options</SPAN> screen, click on "WGET 
+Options" at the lower center.</P>
+<P 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Segoe UI"; COLOR: black; MARGIN: 0in'>Click 
+on "Download .sh" and save the file as wget.sh.<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>--<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+style="BACKGROUND: #ffff99">chmod 700 wget.sh<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>and<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>./wget.sh</SPAN></P>
+<P 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Segoe UI"; COLOR: black; MARGIN: 0in'>(when 
+prompted, enter your email address as your Oracle Support ID and press 
+Enter)</P>
+<P 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Segoe UI"; COLOR: black; MARGIN: 0in'>(you 
+won't be prompted for this, but on the line after your email address, type in 
+your Oracle Support password and press Enter)</P>
+<P 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Segoe UI"; COLOR: black; MARGIN: 0in'>(you 
+can open up another PuTTY window and tail the wget*.log file to see download 
+progress)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

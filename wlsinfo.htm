@@ -1,0 +1,171 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="wlsinfo.htm"><LINK rel=File-List 
+href="wlsinfo_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.352in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.411in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>wls 
+info</P></DIV>
+<DIV 
+style="WIDTH: 2.565in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Sunday, 
+September 8, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">10:45 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 11.352in; MARGIN-TOP: 0.176in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="MARGIN: 0in"><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Oracle Recommend&nbsp;to 
+set&nbsp;</SPAN><SPAN 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; BACKGROUND: aqua; mso-highlight: aqua'>-Xms</SPAN><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: aqua; mso-highlight: aqua">&nbsp;and&nbsp;</SPAN><SPAN 
+style='FONT-SIZE: 10pt; FONT-FAMILY: "Courier New"; BACKGROUND: aqua; mso-highlight: aqua'>-Xmx</SPAN><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: aqua; mso-highlight: aqua">&nbsp;to 
+the same value,</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri"> Thus 
+a good heap size setting would be a heap that is as large as possible within the 
+available physical memory….</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Versions:</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>12.2.1.3/ 
+2/ 1<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>--&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>12.2.1<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>--&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>12.1.2/ 3<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>--&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>10.3.6</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">t3, t3s (if NM is 
+SSL enabled)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">weblogic 
+configuration - binares from oracle - set up oracle home - config.sh - Admin is 
+up and running - $pack and $unpack for MSs - but we need to have jdk and oracle 
+home later templates</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">$pack 
+-domain=C:\oracle\user_projects\domains\mydomain 
+-template=C:\oracle\user_templates\mydomain.jar -template_name="My WebLogic 
+Domain"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">$unpack 
+-template=C:\oracle\user_templates\mydomain.jar 
+-domain=C:\oracle\user_projects\domains\my_new_domain -log_priority=INFO</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">CONFIG_JVM_ARGS on 
+a UNIX:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">export 
+CONFIG_JVM_ARGS="-DuserTemplates=/Oracle/Middleware/wlserver/common/templates/wls/wls.jar,/Oracle/Middleware/wlserver/common/templates/wls/wls_webservice_jaxws.jar"</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">####&lt;MWHOME&gt;/oracle_common/common/bin/config.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">weblogic 
+deployment and how do we automate</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Each WebLogic 
+Network Gatekeeper server has an LDAP directory, but you only need to back up 
+the LDAP data on the Administration Server—the master LDAP server replicates the 
+LDAP data from each Managed Server when updates to security data are made.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">The LDAP 
+repositories on Managed Servers are replicas and cannot be modified. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">We should always 
+start the Coherence servers before the managed server</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Coherence server 
+is stated after managed server it’s not able to connect to already established 
+coherence cluster</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">When Coherence 
+server is started first it creates a new cluster with it being first member</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">swapping and swap 
+out in linux</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">cd 
+/app/ei/ConfigCacheServer; ./<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">COHViewer</SPAN>.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Map (?): <SPAN 
+style="FONT-WEIGHT: bold">cache service-configs</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">size</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>- to get total configs cache </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">cohql</SPAN> 
+- Coherence Command Line Tool </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN><SPAN style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>select key() from 
+"service-configs"</SPAN> - lists all caches - to pick the needed config</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>bye</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">get</SPAN> 
+authorizeSFDCUserAppSvcResponse_RESIDENTIAL</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">put</SPAN> 
+authorizeSFDCUserAppSvcResponse_RESIDENTIAL xxxxxx</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">test</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">get</SPAN> 
+authorizeSFDCUserAppSvcResponse_RESIDENTIAL</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">select value() 
+from "service-configs" where key() ="processAccountList_4.0"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">delete from 
+"service-configs" where key() ="processAccountList_4.0"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">select value() 
+from "service-configs" where key() ="processAccountList_4.0"</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">select key() from 
+"service-configs" where key()="getProfileATTAppSvc_4.0"</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">***********************************************************************************</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">[/app/oracle/Middleware/wlserver_10.3/common/bin] 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">commEnv.sh<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">config.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">setPatchEnv.sh</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">startManagedWebLogic.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">unpack.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">wlscontrol.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">wlst.sh</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">config_builder.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">pack.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">startDerby.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">stopDerby.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">upgrade.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">wlsifconfig.sh</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

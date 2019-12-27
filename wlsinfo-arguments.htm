@@ -1,0 +1,256 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="wlsinfo-arguments.htm"><LINK rel=File-List 
+href="wlsinfo-arguments_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 12.802in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.753in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>arguments</P></DIV>
+<DIV 
+style="WIDTH: 2.672in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Thursday, 
+September 12, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">5:10 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 12.802in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Hogging for 
+600s(what we set) before going to be stuck thread</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">To specify the SSL 
+and TLS versions enabled for the SSL handshake:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Dweblogic.security.SSL.minimumProtocolVersion=TLSV1.0</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes"></SPAN>&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">GC startup args:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:PermSize=256m (perm size 
+starts at 256m)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:MaxPermSize=768m</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+UseG1GC</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:MaxGCPauseMillis=200 
+-verbose:class|gc|jni -XX:+PrintGCDetails -XX:+PrintGCTimeStamps 
+-XX:+PrintGCDateStamps</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Xloggc:/app/oracle/acme/osbdomain/servers/pxvfopw101_osb1/logs/pxvfopw101_osb1_gc.log 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+UseGCLogFileRotation 
+-XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1000K</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Xverbose:memory,gc,gcreport,gcpause,memdbg</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>#Create verbose outputs by using the command-line optionfor example, </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>-Xverbose:memdbg,gcpause,gcreport will show memory management data like 
+garbage collection frequency and duration</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>-Xverbose:memdbg will also show the reason why each garbage collection 
+was started. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>This will help you study the garbage collection behavior.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-Xverbosetimestamp </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Xverboselog:/app/oracle/acme/osbdomain/servers/host1_osb1/logs/host1_osb1_gc.log</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+HeapDumpOnOutOfMemoryError 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-XX:HeapDumpPath=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/hprof-dumps 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-XX:FlightRecorderOptions=defaultrecording=true,disk=true,repository=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/flight-recording-data-current,maxsize=6g,maxage=1d,dumponexit=true,dumponexitpath=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/flight-recording-data-history 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Xmanagement:ssl=false,authenticate=false,port=10020 </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Djava.rmi.server.hostname=host1.directv.com </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-Xns2048m </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-Xgc:genconpar </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XXkeepAreaRatio:25 </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XpauseTarget=200ms </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XXgcThreads:8</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Dweblogic.SelfTuningThreadPoolSizeMin=100 </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Dweblogic.SelfTuningThreadPoolSizeMax=200</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-Dcom.bea.wli.sb.pipeline.RouterRuntimeCache.size=500</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">JFR startup args:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+UnlockCommercialFeatures 
+-XX:+FlightRecorder </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>-XX:StartFlightRecording=duration=0s,filename=/app/oracle/acme/osbdomain/servers/pxvfopw101_osb1/logs/pxvfopw101_osb1.jfr,maxage=300s,maxsize=10M</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Xms8192m 
+-Xmx8192m</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-XX:CompileThreshold=8000</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dtangosol.coherence.cacheconfig=/app/ei/serverconfigs/eicacheconfigs/ei-coherence-cache-config.xml 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dtangosol.coherence.localhost=host1.directv.com 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.Name=host1_osb1 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djava.security.policy=/app/oracle/Middleware/wlserver_10.3/server/lib/weblogic.policy<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.ProductionModeEnabled=true 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.security.SSL.trustedCAKeyStore=/app/oracle/Middleware/wlserver_10.3/server/lib/cacerts 
+-da </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dplatform.home=/app/oracle/Middleware/wlserver_10.3</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dwls.home=/app/oracle/Middleware/wlserver_10.3/server 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.home=/app/oracle/Middleware/wlserver_10.3/server<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dcommon.components.home=/app/oracle/Middleware/oracle_common 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djrf.version=11.1.1</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Ddomain.home=/app/oracle/acme/osbdomain 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djrockit.optfile=/app/oracle/Middleware/oracle_common/modules/oracle.jrf_11.1.1/jrocket_optfile.txt 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.server.config.dir=/app/oracle/acme/osbdomain/config/fmwconfig/servers/host1_osb1 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.domain.config.dir=/app/oracle/acme/osbdomain/config/fmwconfig<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidbeans.carmlloc=/app/oracle/acme/osbdomain/config/fmwconfig/carml<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidstack.home=/app/oracle/acme/osbdomain/config/fmwconfig/arisidprovider 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.security.jps.config=/app/oracle/acme/osbdomain/config/fmwconfig/jps-config.xml 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.deployed.app.dir=/app/oracle/acme/osbdomain/servers/host1_osb1/tmp/_WL_user 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.deployed.app.ext=/- 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.alternateTypesDirectory=/app/oracle/Middleware/oracle_common/modules/oracle.ossoiap_11.1.1,/app/oracle/Middleware/oracle_common/modules/oracle.oamprovider_11.1.1 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djava.protocol.handler.pkgs=oracle.mds.net.protocol<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.jdbc.remoteEnabled=true<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dem.oracle.home=/app/oracle/Middleware/oracle_common 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djava.awt.headless=true 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.management.discover=false 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.management.server=t3://host1.directv.com:10000<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dwlw.iterativeDev=false 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dwlw.testConsole=false 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dwlw.logErrorsToConsole=false 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dweblogic.ext.dirs=/app/oracle/Middleware/patch_wls1036/profiles/default/sysext_manifest_classpath:/app/oracle/Middleware/patch_ocp371/profiles/default/sysext_manifest_classpath</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

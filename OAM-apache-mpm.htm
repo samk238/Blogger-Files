@@ -1,0 +1,795 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="OAM-apache-mpm.htm"><LINK rel=File-List 
+href="OAM-apache-mpm_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 13.417in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.136in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>mpm</P></DIV>
+<DIV 
+style="WIDTH: 2.551in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Monday, 
+September 9, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">5:38 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 7.144in; MARGIN-TOP: 0.176in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>mpm_<SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">prefork</SPAN>_module<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>mpm_<SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">worker</SPAN>_module<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>mpm_<SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">event</SPAN>_module</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">mpm_netware_module<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>mpm_mpmt_os2_module<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>mpm_winnt_module<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>mpm_netware_module</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/opt/oracle/HTTPServer24/conf/extra/httpd-mpm.conf&nbsp; 
+</P></DIV>
+<TABLE 
+style="BORDER-LEFT-WIDTH: 0pt; BORDER-RIGHT-WIDTH: 0pt; WIDTH: 13.417in; BORDER-BOTTOM-WIDTH: 0pt; MARGIN-TOP: 0.361in; BORDER-COLLAPSE: collapse; DIRECTION: ltr; MARGIN-LEFT: 0in; BORDER-TOP-WIDTH: 0pt" 
+cellSpacing=0 cols=10 cellPadding=0 border=0 valign="top">
+  <TBODY>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 2.252in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 3.343in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="HEIGHT: 11.2in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=6>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      !mpm_netware_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>PidFile 
+      "logs/httpd.pid"</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_<SPAN 
+      style="BACKGROUND: yellow; mso-highlight: yellow">prefork</SPAN>_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>StartServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>5</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MinSpareServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>5</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxSpareServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>5</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxRequestWorkers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>40</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+      style="FONT-WEIGHT: bold">MaxConnectionsPerChild</SPAN><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>5000</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ServerLimit<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>10</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_<SPAN 
+      style="BACKGROUND: yellow; mso-highlight: yellow">worker</SPAN>_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>StartServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>5</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MinSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>20</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>40</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ThreadsPerChild<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>20</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxRequestWorkers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>40</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>MaxConnectionsPerChild<SPAN style="mso-spacerun: yes">&nbsp; 
+      </SPAN>5000</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ServerLimit<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>10</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_<SPAN 
+      style="BACKGROUND: yellow; mso-highlight: yellow">event</SPAN>_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>StartServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>20</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MinSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>75</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>250</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ThreadsPerChild<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>25</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxRequestWorkers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>1600</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>MaxConnectionsPerChild<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+      </SPAN>0</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_netware_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ThreadStackSize<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>65536</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>StartThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>250</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MinSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>25</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>250</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>1000</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>MaxConnectionsPerChild<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+      </SPAN>0</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_mpmt_os2_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>StartServers<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>2</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MinSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>5</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxSpareThreads<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>10</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>MaxConnectionsPerChild<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+      </SPAN>0</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_winnt_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>ThreadsPerChild<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>150</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+      </SPAN>MaxConnectionsPerChild<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+      </SPAN>0</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      !mpm_netware_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxMemFree<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>2048</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+      mpm_netware_module&gt;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>MaxMemFree<SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>100</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 4.277in; WIDTH: 5.747in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=2 colSpan=3>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="BACKGROUND: lime; mso-highlight: lime">Directives</SPAN> that are 
+      implemented by more than one <SPAN 
+      style="BACKGROUND: aqua; mso-highlight: aqua">multi-processing module 
+      (MPM)</SPAN></P>
+      <P style="MARGIN: 0in"><A 
+      href="https://httpd.apache.org/docs/2.4/mod/mpm_common.html"><SPAN 
+      style="FONT-SIZE: 10.5pt; FONT-FAMILY: Arial; BACKGROUND: white; FONT-WEIGHT: bold">mpm_common</SPAN></A></P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">01<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>CoreDumpDirectory </P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">02<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>EnableExceptionHook</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">03<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>GracefulShutdownTimeout</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">04<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Listen</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">05<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ListenBackLog</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">06<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ListenCoresBucketsRatio</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">07<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxConnectionsPerChild</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">08<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxMemFree</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">09<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxRequestWorkers</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">10<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxSpareThreads</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">11<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MinSpareThreads</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">12<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>PidFile</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">13<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ReceiveBufferSize</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">14<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ScoreBoardFile</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">15<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>SendBufferSize</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">16<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ServerLimit</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">17<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>StartServers</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">18<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>StartThreads</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">19<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadLimit</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">20<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadsPerChild</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">21<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadStackSize</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 2.249in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">oracle&gt; 
+      <SPAN style="FONT-WEIGHT: bold">httpd -l</SPAN></P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Compiled in 
+      modules:</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>core.c</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>mod_so.c</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>http_core.c</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">List all 
+      modules:<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+      style="FONT-WEIGHT: bold">httpd -M</SPAN></P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="FONT-WEIGHT: bold">httpd -V</SPAN>:</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Server 
+      MPM:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>prefork</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>threaded:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>no</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>forked:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+      </SPAN>yes (variable process count)</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.249in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 2.027in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 2.252in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 3.343in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.364in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 5.359in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 5.359in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 5.36in; WIDTH: 9.497in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top colSpan=7><IMG 
+      alt="Machine generated alternative text:&#10;Balanced Apache Tuning Improves Performance and Throughput &#10;Heavy Load &#10;http requests &#10;http requests &#10;http requests &#10;http requests &#10;Removing ServerLimit will &#10;make Apache default to 16, &#10;so a maximum of 16 http &#10;worker processes could be &#10;spawned as demand &#10;increases. Increasing &#10;ServerLimit allows more &#10;httpd.worker processes. &#10;Apache HTTP Server &#10;Fewer threads sharing &#10;more connections &#10;create a better &#10;balance in demand on &#10;OAP connections &#10;Fewer &#10;ThreadsPerChild &#10;reduces the &#10;number of threads &#10;that have to wait in &#10;queue for an open &#10;OAP connection to &#10;help mitigate &#10;contention &#10;WebLogic &#10;Access Server &#10;ID Store &#10;Increasing Max Connections &#10;and AAA Timeout Threshold &#10;help throughput, minimize &#10;busy waiting threads, and &#10;unresponsive connection &#10;resets &#10;Policy &#10;Webgate Definition: &#10;Max Connections 8 &#10;AAA Timeout Threshold 20 &#10;client _ request _ retry _ attempts 2 &#10;htt &#10;htt &#10;htt &#10;htt &#10;Webgate &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;LDAP &#10;Database &#10;Increasing retry &#10;attempts may help &#10;threads contacting &#10;a busy Access &#10;Server to try again &#10;before giving up. &#10;Apache Tuning Configurations: &#10;ThreadsPerChild 64 &#10;MaxClients ThreadsPerChild * ServerLimit &#10;MaxClients 512 " 
+      src="OAM-apache-mpm_files/mhtE0(1).tmp" width=908 height=511></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 5.359in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 2.252in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 3.343in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.166in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.031in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.031in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.031in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.031in; WIDTH: 2.252in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.031in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 5.42in; WIDTH: 7.656in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=3 colSpan=5><IMG 
+      alt="Machine generated alternative text:&#10;Apache Prefork Mode &#10;listener &#10;socket &#10;queue &#10;one request/ &#10;process at a time &#10;Apache Worker Mode &#10;httpd &#10;listener &#10;socket &#10;queue &#10;each process &#10;handles multiple &#10;requests, one in &#10;each of its &#10;threads. If all &#10;threads are full in &#10;a process, use an &#10;empty thread in &#10;another process. &#10;httpd.worker &#10;httpd.worker &#10;httpd.worker &#10;additional processes &#10;created to service &#10;simultaneous requests &#10;as necessary &#10;additional processes &#10;can be created if &#10;necessary &#10;thread &#10;thread &#10;thread &#10;thread &#10;thread &#10;thread &#10;httpd.worker &#10;httpd.worker " 
+      src="OAM-apache-mpm_files/mht102(1).tmp" width=731 height=516></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 0.407in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 0.02in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 2.252in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.548in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 4.839in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="HEIGHT: 16.05in; WIDTH: 5.609in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=2 colSpan=4>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">CoreDumpDirectory 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Directory where Apache HTTP Server 
+      attempts to switch before dumping core</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>CoreDumpDirectory directory</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">EnableExceptionHook 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Enables a hook that runs exception 
+      handlers after a crash</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>EnableExceptionHook On|Off</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">GracefulShutdownTimeout 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Specify a timeout after which a 
+      gracefully shutdown server will exit.</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>GracefulShutdownTimeout 
+seconds</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Listen 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>IP addresses and ports that the 
+      server listens to</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Listen [IP-address:]portnumber 
+      [protocol]</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ListenBackLog 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Maximum length of the queue of 
+      pending connections</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ListenBackLog backlog</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ListenCoresBucketsRatio 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Ratio between the number of CPU 
+      cores (online) and the number of listeners buckets</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ListenCoresBucketsRatio ratio</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">MaxConnectionsPerChild 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Limit on the number of connections 
+      that an individual child server will handle during its life</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxConnectionsPerChild number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">MaxMemFree 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Maximum amount of memory that the 
+      main allocator is allowed to hold without calling free()</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxMemFree KBytes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">MaxRequestWorkers 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Maximum number of connections that 
+      will be processed simultaneously</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxRequestWorkers number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">MaxSpareThreads 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Maximum number of idle threads</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MaxSpareThreads number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">MinSpareThreads 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Minimum number of idle threads 
+      available to handle request spikes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>MinSpareThreads number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">PidFile 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>File where the server records the 
+      process ID of the daemon</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>PidFile filename</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ReceiveBufferSize 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>TCP receive buffer size</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ReceiveBufferSize bytes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ScoreBoardFile 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Location of the file used to store 
+      coordination data for the child processes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ScoreBoardFile file-path</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">SendBufferSize 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>TCP buffer size</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>SendBufferSize bytes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ServerLimit 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Upper limit on configurable number 
+      of processes</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ServerLimit number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">StartServers 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Number of child server processes 
+      created at startup</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>StartServers number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">StartThreads 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Number of threads created on 
+      startup</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>StartThreads number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ThreadLimit 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Sets the upper limit on the 
+      configurable number of threads per child process</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadLimit number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ThreadsPerChild 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>Number of threads created by each 
+      child process</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadsPerChild number</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+      <P 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">ThreadStackSize 
+      Directive</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>The size in bytes of the stack 
+      used by threads handling client connections</P>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>ThreadStackSize size</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 4.839in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 0.15in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 3.343in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 0.593in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 2.927in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 0.208in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 11.21in; WIDTH: 0.583in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

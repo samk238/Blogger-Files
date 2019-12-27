@@ -1,0 +1,161 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="GCandDumps-threaddump.htm"><LINK rel=File-List 
+href="GCandDumps-threaddump_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 14.281in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 2.011in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>thread 
+dump</P></DIV>
+<DIV 
+style="WIDTH: 2.818in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Wednesday, 
+September 11, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">7:28 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 14.281in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: #222635; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white; FONT-WEIGHT: bold">NEW</SPAN><SPAN 
+style="BACKGROUND: white">: The thread is created but has not been processed 
+yet.</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: #222635; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white; FONT-WEIGHT: bold">RUNNABLE</SPAN><SPAN 
+style="BACKGROUND: white">: The thread is occupying the CPU and processing a 
+task. (It may be in&nbsp;WAITING&nbsp;status due to the OS's resource 
+distribution.)</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: #222635; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white; FONT-WEIGHT: bold">BLOCKED</SPAN><SPAN 
+style="BACKGROUND: white">: The thread is waiting for a different thread to 
+release its lock in order to get the monitor lock.</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: #222635; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white; FONT-WEIGHT: bold">WAITING</SPAN><SPAN 
+style="BACKGROUND: white">: The thread is waiting by using a&nbsp;wait, 
+join&nbsp;or&nbsp;park&nbsp;method.</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: #222635; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white; FONT-WEIGHT: bold">TIMED_WAITING</SPAN><SPAN 
+style="BACKGROUND: white">: The thread is waiting by using 
+a&nbsp;sleep,&nbsp;wait,&nbsp;join&nbsp;or&nbsp;park&nbsp;method. (The 
+difference from&nbsp;WAITING&nbsp;is that the maximum waiting time is specified 
+by the method parameter, and&nbsp;</SPAN><SPAN 
+style="BACKGROUND: white; FONT-STYLE: italic">WAITING</SPAN><SPAN 
+style="BACKGROUND: white">&nbsp;can be relieved by time as well as external 
+changes.)&nbsp;</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">"LDAPConnThread-15886 
+ldaps://iduat5.intra.schneider.com:13389" #77545 daemon prio=5 os_prio=0 
+tid=0x00007f0bb01d8800 nid=0x4c93 runnable [0x00007f0b6ed50000]</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>java.lang.Thread.State: RUNNABLE</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.net.SocketInputStream.socketRead0(Native Method)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.net.SocketInputStream.socketRead(SocketInputStream.java:116)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.net.SocketInputStream.read(SocketInputStream.java:171)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.net.SocketInputStream.read(SocketInputStream.java:141)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.io.BufferedInputStream.fill(BufferedInputStream.java:246)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.io.BufferedInputStream.read(BufferedInputStream.java:265)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>- locked &lt;0x0000000716a97720&gt; (a 
+java.io.BufferedInputStream)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+netscape.ldap.LDAPConnThread.run(Unknown Source)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>at 
+java.lang.Thread.run(Thread.java:748)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes"></SPAN>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Thread name</SPAN>; often used by 
+middleware vendors to identify the Thread Id along with its associated Thread 
+Pool name and state (running, stuck etc.)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Thread type &amp; priority 
+ex</SPAN>: daemon prio=3 ** middleware softwares typically create their Threads 
+as daemon meaning their Threads are running in background; </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>providing services to its user e.g. your Java EE application **</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Java Thread ID ex</SPAN>: 
+tid=0x000000011e52a800 ** This is the Java Thread Id obtained via 
+java.lang.Thread.getId() and usually implemented as an auto-incrementing long 
+1..n**</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Native Thread ID</SPAN> ex: 
+nid=0x251c** Crucial information as this native Thread Id allows you to 
+correlate for example which Threads from an OS perspective are using the most 
+CPU within your JVM etc. **</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– J<SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">ava Thread State and detail</SPAN> 
+ex: waiting for monitor entry [0xfffffffea5afb000] java.lang.Thread.State: 
+BLOCKED (on object monitor)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>** Allows to quickly learn about Thread state and its potential current 
+blocking condition **</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Java Thread Stack Trac</SPAN>e; 
+this is by far the most important data that you will find from the Thread 
+Dump.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>This is also where you will spent most of your analysis time since the 
+Java Stack Trace provides you with 90% of the information that you need in order 
+to pinpoint root cause of many problem pattern types as you will learn later in 
+the training sessions</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">– <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Java Heap breakdow</SPAN>n; 
+starting with HotSpot VM 1.6, you will also find at the bottom of the Thread 
+Dump snapshot a breakdown of the HotSpot memory spaces utilization </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>such as your Java Heap (YoungGen, OldGen) &amp; PermGen space. This is 
+quite useful when excessive GC is suspected as a possible root cause so you can 
+do out-of-the-box correlation with Thread data / patterns found</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG 
+alt="Machine generated alternative text:&#10;DURGASOFT &#10;www.durgasoft.ccn " 
+src="GCandDumps-threaddump_files/mhtC7A4(1).tmp" width=1061 height=768></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="WM.htm"><LINK rel=File-List 
+href="WM_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 12.063in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 2.271in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>WorkManagers</P></DIV>
+<DIV 
+style="WIDTH: 2.584in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Saturday, 
+September 7, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">3:45 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 12.063in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">Work Managers:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>- The user-specified name of this 
+MBean instance</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>- Minimum/ Maximum number of 
+concurrent threads that can execute requests sharing this constraint.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">You can use any of 
+these Work Manager components to control the performance of your application by 
+referencing the name of the component in the application deployment 
+descriptor.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Work Manager 
+components:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0">Fair Share Request Class</SPAN> - Specifies the 
+average thread-use time required to process requests. The default fair share 
+value is 50</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0">Response Time Request Class</SPAN> - Specifies a 
+response time goal in milliseconds.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0; FONT-WEIGHT: bold">Min</SPAN><SPAN 
+style="BACKGROUND: #00b0f0"> Threads Constraint</SPAN> - Guarantees the number 
+of threads the server will allocate to affected requests to avoid deadlocks. The 
+default is zero</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0; FONT-WEIGHT: bold">Max</SPAN><SPAN 
+style="BACKGROUND: #00b0f0"> Threads Constraint</SPAN> - Limits the number of 
+concurrent threads executing requests from the constrained work set. The default 
+is unlimited</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0">Capacity Constraint</SPAN> - Causes the server to 
+reject requests only when it has reached its capacity. The default is -1</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: #00b0f0">Context Request Clas</SPAN>s - Assigns request 
+classes to requests based on context information, such as the current user or 
+the current user's group.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: white">You can configure Work Managers at the domain level, 
+application level, and module level or by using the WebLogic Server 
+Administration Console:</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<UL 
+style="MARGIN-BOTTOM: 0in; unicode-bidi: embed; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.375in" 
+type=disc>
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">config.xml</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white">—Work 
+  Managers specified in&nbsp;config.xml&nbsp;can be assigned to any application, 
+  or application component, in the domain.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">weblogic-application.xml</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white">—Work 
+  Managers specified at the application level can be assigned to that 
+  application, or any component of that application.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">weblogic-ejb-jar.xml&nbsp;or&nbsp;weblogic.xml</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white">—Work 
+  Managers specified at the component level can be assigned to that 
+  component.</SPAN> 
+  <LI style="MARGIN-BOTTOM: 0px; VERTICAL-ALIGN: middle; MARGIN-TOP: 0px"><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white; FONT-WEIGHT: bold">weblogic.xml</SPAN><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; BACKGROUND: white">—Work 
+  Managers specified for a Web application.</SPAN> </LI></UL></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

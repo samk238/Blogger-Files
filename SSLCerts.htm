@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="SSLCerts.htm"><LINK rel=File-List 
+href="SSLCerts_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 11.825in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 1.532in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>SSL 
+certs</P></DIV>
+<DIV 
+style="WIDTH: 2.565in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0.021in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Sunday, 
+September 8, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">10:30 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 11.825in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">SL Certificate 
+bundle file (your_domain_name.p7b)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">$keytool -import 
+-trustcacerts -alias server -file your_domain_name.p7b -keystore 
+your_site_name.jks</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">PEM (Privacy 
+Enhanced Mail) format is the preferred format for private keys, digital 
+certificates, and trusted certificate authorities (CAs)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Primary 
+Certificate &gt; Intermediate Certificate &gt; Root Certificate. Save the file 
+with a .pem extension</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">1. List the 
+detailed information about installed certificates</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>$ keytool -<SPAN 
+style="BACKGROUND: #ffff99">list</SPAN> -v -keystore cacert.jks</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">2. Generate CSR 
+#Certificate Signing Request (CSR)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>$ keytool -certreq -v -alias 
+server -file dnb.csr -keypass changeit123 -keystore cacert.jks -storepass 
+changeit123</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>#$keytool -genkey -alias 
+server -keyalg RSA -keysize 2048 -keystore your_site_name.jks</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">3. Send the 
+generated CSR to the Certificate Vendor to get the new certificate </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>-----BEGIN NEW 
+CERTIFICATE REQUEST----- and -----END NEW CERTIFICATE REQUEST----- tags</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">4. Verify the 
+received cert:</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>$ keytool -printcert -v -file 
+cert.cer</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">5. Importing or 
+installing the received certificate in keystore file</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>$ keytool -<SPAN 
+style="BACKGROUND: #ffff99">import</SPAN> -v -alias<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>xxsomethingxx<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-file<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>cert.cer<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-keypass changeit<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-keystore cacert.jks<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>-storepass<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>changeit123</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">6. Place the 
+keystore file in the Weblogic/WebSphere domain SSL configuration directory and 
+restart the whole domain.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">6. Once installed 
+the certificate verify the keystore file</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>$ keytool -list -v -keystore 
+cacert.jks</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Note: Observer the validation 
+period and CN name</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">7. Place the 
+keystore file in the Weblogic/WebSphere domain SSL configuration directory and 
+restart the whole domain.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>How to generate new keystore file</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; 
+</SPAN>****************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$ keytool -genkey -v -alias 
+qa-dnb.ges.symantec.com -keysize 1024 -dname "CN=qa-dnb.ges.symantec.com, OU=IT 
+Security, O=Symantec Corporation, L=Mountain View, ST=California, C=US" -keyalg 
+rsa -validity 365 -keypass changeit -keystore cacert.jks -storepass changeit123 
+</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>If there is a problem in executing above 
+command to generate new keystore file then execute the below one and supply the 
+values of CN Name, Organization, Organization Unit, Locality, State, 
+Country.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>$ keytool -genkey -alias 
+qa-dnb.ges.symantec.com -validity 730 -keystore cacerts.jks</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#######################################################################################################################################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">certs reqs - we 
+will create a self sigened - we create a .crt and prvide to security team and 
+they will trsut and return it back<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN>(genkey or openssl)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>=&gt; respond pkcs12/ crt/ 
+cer -<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>and will import those 
+(pribate/public)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">We have a portal 
+and provdie machine name and request for a cert, for entire app (ex: tm-UAT), 
+they will accumulate with root and intermidiate (import to ****trust store 
+public).</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">In "wls" we will 
+import to identiy (which import to private) (2-way ssl will have a server crt 
+also)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Client will have 
+public key and will check with our pricate to establish a connection.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>jks - will 
+have this all certs (demo and identiy)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>java - has cacerts 
+(who use it as trsut store)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">tomact - trust 
+store has (3rd party and our certs which is nothing but publickey)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">#####################################################################################</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in"><IMG 
+alt="End-entity Certificate &#10;Owners name &#10;Owner's public key &#10;ssuer's (CA's) &#10;name &#10;Issuer's signature &#10;reference &#10;Intermediate Certificate &#10;Owners (CA's) name &#10;sgn &#10;Owner's public key &#10;Issuers (root CA's) &#10;name &#10;Issuers signature &#10;self-sign &#10;Root CA's name &#10;Root CA's public key &#10;Root CA's signature " 
+src="SSLCerts_files/mhtE6DC(1).tmp" width=552 height=324></P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

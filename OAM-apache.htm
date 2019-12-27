@@ -1,0 +1,386 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="OAM-apache.htm"><LINK rel=File-List 
+href="OAM-apache_files/filelist.xml"></HEAD>
+<BODY lang=en-US style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 12.5in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV style="WIDTH: 1.357in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>apache</P></DIV>
+<DIV 
+style="WIDTH: 2.565in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">Sunday, 
+September 8, 2019</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">10:00 
+PM</P></DIV>
+<DIV 
+style="WIDTH: 12.314in; MARGIN-TOP: 0.362in; DIRECTION: ltr; MARGIN-LEFT: 0.186in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">Apache</SPAN> is the web server 
+component of the popular LAMP (Linux, Apache, MySQL, PHP) stack</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">NGINX</SPAN> (Pronounced as 
+Engine-X) is an open source, lightweight, high-performance web server or proxy 
+server. </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Nginx used as 
+reverse proxy server for HTTP, HTTPS, SMTP, IMAP, POP3 protocols, on the other 
+hand, it is also used for servers load balancing and HTTP Cache</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">rpm -qa |grep 
+httpd (Package Manager for Red Hat, qa - displays list of installed packages, qi 
+{package} - displays info of package)</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">*****************************************************************************************</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Apache HTTP 
+server:<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>=&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Download<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>=&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Extract - tar xvf 
+httpd-NN.tar<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>=&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Configuring the source tree: You 
+should call the configure script from within the root directory of the 
+distribution.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">HTTPD='/app/apache/bin/httpd'</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/app/apache2.2/conf/httpd.conf<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>==&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">httpd.conf</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>/app/apache2.2/<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>bin<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>==&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>apachectl 
+start|stop|restart|graceful|graceful-stop</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>/app/apache2.2/<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>cgi-bin<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>scripts to run</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>/app/apache2.2/<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN>htdocs<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>all the docs</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">export 
+ORACLE_HOME=/opt/oracle/ohs/ohs/</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">export 
+LD_LIBRARY_PATH=$ORACLE_HOME/lib:$ORACLE_HOME/ohs/lib</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">httpd -version</SPAN> (Server version: Apache/2.4.38 
+(Unix))</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Plugin 
+</SPAN>on Apache<SPAN style="FONT-WEIGHT: bold">:</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>lib/mod_wl.so, 
+mod_was_ap22_http.so<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>-- WebLogic 
+proxy module mod_proxy : --enable-module=so :</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Install</SPAN><SPAN 
+style="FONT-WEIGHT: bold"> Plugin:<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN></SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>perl 
+APACHE_HOME\bin\apxs -i -a -n weblogic mod_wl.so</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Host, port and 
+context root of the wls application in ***<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">httpd.conf</SPAN>***</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+mod_weblogic.c&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>#Config file for WebLogic Server that 
+defines the parameters</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>Include conf/weblogic.conf</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">or - use this and locations - 
+defined here are global for Location directive</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>WebLogicCluster 
+w1s1.com:7001,w1s2.com:7001,w1s3.com:7001<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>//WebLogicHost myweblogic.server.com </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>MatchExpression *.jsp<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>//WebLogicPort 7001<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>MatchExpression *.xyz</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;Location 
+/messaging&gt;<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>- we can get the context root from wls deployments tab***</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>SetHandler weblogic-handler</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>WebLogicCluster <SPAN 
+style="FONT-WEIGHT: bold; COLOR: red">w1s1</SPAN>.com:7001,<SPAN 
+style="FONT-WEIGHT: bold; COLOR: #002060">w1s2</SPAN>.com:7001,<SPAN 
+style="FONT-WEIGHT: bold; COLOR: #bf9000">w1s3</SPAN>.com:7001<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>#WebLogicCluster<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN><SPAN 
+style="COLOR: red">w1s1</SPAN>.com:7001,<SPAN 
+style="COLOR: red">w1s1</SPAN>.com:7002,<SPAN 
+style="COLOR: red">w1s1</SPAN>.com:7003</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Debug ALL</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>DebugConfigInfo ON</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>WLLogFile /tmp/w1proxy1.log</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/Location&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Testing: <A 
+href="http://myapacheserver.com/weblogic/">http://myApacheserver.com/weblogic/</A><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><A 
+href="http://myserver.com/messaging?_WebLogicBridgeConfig">http://myserver.com/messaging?_WebLogicBridgeConfig</A> 
+- which server takes request</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfDefine 
+SSL&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>LoadModule ssl_module 
+modules/mod_ssl.so<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN>&lt;/IfDefine&gt;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;IfModule 
+ssl_module&gt;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">Include 
+conf/extra/httpd-ssl.conf</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">SSLRandomSeed 
+startup builtin</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in 0in 0in 0.375in">SSLRandomSeed 
+connect builtin</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&lt;/IfModule&gt;</P>
+<P style="MARGIN: 0in"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">Your 
+server has multiple hostnames that resolve to a single address, and you want to 
+respond differently for&nbsp;</SPAN><A href="http://www.example.com/"><SPAN 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; BACKGROUND: white; COLOR: #003366'>www.example.com</SPAN></A><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">&nbsp;and&nbsp;</SPAN><A 
+href="http://www.example.org/"><SPAN 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; BACKGROUND: white; COLOR: #003366'>www.example.org</SPAN></A><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">.</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: #c46d34"># Ensure that Apache listens on port 80</SPAN><SPAN 
+style="COLOR: black"><BR></SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #112288">Listen </SPAN><SPAN 
+style="COLOR: #007777">80</SPAN><SPAN style="COLOR: black"><BR></SPAN><SPAN 
+style="COLOR: #666600">&lt;</SPAN><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; COLOR: #882211; mso-highlight: yellow">VirtualHost 
+</SPAN><SPAN style="COLOR: #666600">*:</SPAN><SPAN 
+style="COLOR: #007777">80</SPAN><SPAN style="COLOR: #666600">&gt;</SPAN><SPAN 
+style="COLOR: black"><BR><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-WEIGHT: bold; COLOR: #112288">DocumentRoot 
+</SPAN><SPAN style="COLOR: #006600">"/www/example1"</SPAN><SPAN 
+style="COLOR: black"><BR><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-WEIGHT: bold; COLOR: #112288">ServerName 
+</SPAN><A href="http://www.example1.com/"><SPAN 
+style="COLOR: black">www</SPAN><SPAN style="COLOR: #666600">.</SPAN><SPAN 
+style="COLOR: black">example1</SPAN><SPAN style="COLOR: #666600">.</SPAN><SPAN 
+style="COLOR: black">com</SPAN></A></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: black"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #112288">ServerAlias</SPAN><SPAN 
+style="COLOR: black"> server</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: black; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: #c46d34"># Other directives here</SPAN><SPAN 
+style="COLOR: black"><BR></SPAN><SPAN style="COLOR: #666600">&lt;/</SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #882211">VirtualHost</SPAN><SPAN 
+style="COLOR: #666600">&gt;</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: #666600; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: #666600">&lt;</SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #882211">VirtualHost </SPAN><SPAN 
+style="COLOR: #666600">*:</SPAN><SPAN style="COLOR: #007777">80</SPAN><SPAN 
+style="COLOR: #666600">&gt;</SPAN><SPAN style="COLOR: black"><BR><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #112288">DocumentRoot </SPAN><SPAN 
+style="COLOR: #006600">"/www/example2"</SPAN><SPAN 
+style="COLOR: black"><BR><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-WEIGHT: bold; COLOR: #112288">ServerName 
+</SPAN><A href="http://www.example2.org/"><SPAN 
+style="COLOR: black">www</SPAN><SPAN style="COLOR: #666600">.</SPAN><SPAN 
+style="COLOR: black">example2</SPAN><SPAN style="COLOR: #666600">.</SPAN><SPAN 
+style="COLOR: black">org</SPAN></A></P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: black"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #112288">ServerAlias</SPAN><SPAN 
+style="COLOR: black"> server</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: black; MARGIN: 0in'>&nbsp;</P>
+<P style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; MARGIN: 0in'><SPAN 
+style="COLOR: #c46d34"># Other directives here</SPAN><SPAN 
+style="COLOR: black"><BR></SPAN><SPAN style="COLOR: #666600">&lt;/</SPAN><SPAN 
+style="FONT-WEIGHT: bold; COLOR: #882211">VirtualHost</SPAN><SPAN 
+style="COLOR: #666600">&gt;</SPAN></P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: #666600; MARGIN: 0in'>&nbsp;</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: #666600; MARGIN: 0in'>&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="BACKGROUND: yellow; FONT-WEIGHT: bold; mso-highlight: yellow">Logging:</SPAN></P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/opt/oracle/HTTPServer24/<SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow">logs</SPAN> -<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN><SPAN 
+style="FONT-WEIGHT: bold">access</SPAN>_log<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">error</SPAN>_log<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">ssl</SPAN>_<SPAN 
+style="FONT-WEIGHT: bold">access</SPAN>_log<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">ssl_error</SPAN>_log<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">ssl_request</SPAN>_log</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="FONT-WEIGHT: bold">1xx</SPAN>: Informational,<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">2xx</SPAN>: Success,<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">3xx</SPAN>: Redirection,<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">4xx</SPAN>: Client Error,<SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="FONT-WEIGHT: bold">5xx</SPAN>: Server Error</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">Module <SPAN 
+style="FONT-WEIGHT: bold">mod_log_config </SPAN>- LogFormat and CustomLog 
+directives</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>The <SPAN 
+style="FONT-WEIGHT: bold">access</SPAN> log contains information about<SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua"> requests coming</SPAN> in to the 
+web server</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>The <SPAN 
+style="FONT-WEIGHT: bold">error</SPAN> log contains information about <SPAN 
+style="BACKGROUND: aqua; mso-highlight: aqua">errors the web server 
+encountered</SPAN> when processing requests, such as missing files.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">400 -&gt; Bad 
+Request error<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>, HTTP request 
+that was sent to the server has <SPAN style="BACKGROUND: #ffff99">invalid 
+syntax.</SPAN></P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">401 -&gt; 
+Unauthorized error<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>, user trying to 
+access the resource has not been authenticated or has not been <SPAN 
+style="BACKGROUND: #ffff99">authenticated</SPAN> correctly.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">403 -&gt; 
+Forbidden error<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>, 
+valid request but the server is <SPAN 
+style="BACKGROUND: #ffff99">refusing</SPAN> to serve the request, due to a lack 
+of permission to access the requested resource</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">404 -&gt; Not 
+Found error<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>, 
+user is able to communicate with the server but it is <SPAN 
+style="BACKGROUND: #ffff99">unable to locate</SPAN> the requested file or 
+resource.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">500 -&gt; Internal 
+Server<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>, server 
+<SPAN style="BACKGROUND: #ffff99">cannot process</SPAN> the request for an 
+unknown reason.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">502 -&gt; Bad 
+Gateway error<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>, server is a 
+gateway or proxy server, not receiving<SPAN style="BACKGROUND: #ffff99"> a valid 
+response from the backend servers</SPAN> that should actually fulfill the 
+request.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">503 -&gt; Service 
+Unavailable , server is overloaded or <SPAN style="BACKGROUND: #ffff99">under 
+maintenance</SPAN>. This error implies that the service should become available 
+at some point.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">504 -&gt; Gateway 
+Timeout<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>, server 
+is a gateway or proxy server, and it is not receiving a response from the 
+backend servers <SPAN style="BACKGROUND: #ffff99">within the allowed time</SPAN> 
+period.</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">/apps/apache/http_8.5.5_eam/bin/httpd 
+<SPAN style="BACKGROUND: yellow; mso-highlight: yellow">-d</SPAN> 
+/apps/apache/http_8.5.5_eam <SPAN 
+style="BACKGROUND: yellow; mso-highlight: yellow"><SPAN 
+style="mso-spacerun: yes">&nbsp;</SPAN>-k</SPAN><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>start </P>
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN style="BACKGROUND: yellow; mso-highlight: yellow">-d</SPAN> 
+serverroot<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>- Set the initial value 
+for the ServerRoot directive to serverroot. This can be overridden by the 
+ServerRoot directive in the configuration file.</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -f config 
+]</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -C directive ] 
+[ -c directive ]</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -D parameter 
+]</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -e level ]</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -E file ] </P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -k 
+start|restart|graceful|stop|graceful-stop ]</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -R directory ] 
+</P>
+<P 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; COLOR: black; MARGIN: 0in"><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>[ -h ] [ -l ] [ 
+-L ] [ -S ] [ -t ]<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>[ -v ] [ -V ] [ 
+-X ] [ -M ] [ -T ]</P>
+<P 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Courier New"; COLOR: #666600; MARGIN: 0in'>&nbsp;</P></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>
