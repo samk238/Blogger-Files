@@ -1,0 +1,757 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="apache_mpm.htm">
+<link rel=File-List href="apache_mpm_files/filelist.xml">
+</head>
+
+<body lang=en-US style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:13.4173in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:1.1361in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>mpm</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.5513in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Monday,
+September 9, 2019</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>5:38
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.1763in;margin-left:0in;width:7.1444in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+style='mso-spacerun:yes'>  </span>mpm_<span style='font-weight:bold;background:
+yellow;mso-highlight:yellow'>prefork</span>_module<span
+style='mso-spacerun:yes'>    </span>mpm_<span style='font-weight:bold;
+background:yellow;mso-highlight:yellow'>worker</span>_module<span
+style='mso-spacerun:yes'>            </span>mpm_<span style='font-weight:bold;
+background:yellow;mso-highlight:yellow'>event</span>_module</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>mpm_netware_module<span
+style='mso-spacerun:yes'>    </span>mpm_mpmt_os2_module<span
+style='mso-spacerun:yes'>      </span>mpm_winnt_module<span
+style='mso-spacerun:yes'>           </span>mpm_netware_module</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>/opt/oracle/HTTPServer24/conf/extra/httpd-mpm.conf&nbsp;
+</p>
+
+</div>
+
+<table border=0 cellpadding=0 cellspacing=0 cols=10 valign=top
+ style='direction:ltr;border-collapse:collapse;border-width:0pt;margin-top:
+ .3618in;margin-left:0in;width:13.4173in'>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.2527in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:3.343in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td rowspan=6 valign=top style='vertical-align:top;margin:0in;padding:0pt;
+  width:2.927in;height:11.2006in'>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  !mpm_netware_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>PidFile &quot;logs/httpd.pid&quot;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule mpm_<span
+  style='background:yellow;mso-highlight:yellow'>prefork</span>_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>StartServers<span
+  style='mso-spacerun:yes'>                  </span>5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MinSpareServers<span
+  style='mso-spacerun:yes'>         </span>5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxSpareServers<span
+  style='mso-spacerun:yes'>         </span>5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxRequestWorkers<span
+  style='mso-spacerun:yes'>       </span>40</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span><span style='font-weight:bold'>MaxConnectionsPerChild</span><span
+  style='mso-spacerun:yes'>  </span>5000</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ServerLimit<span
+  style='mso-spacerun:yes'>             </span>10</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule mpm_<span
+  style='background:yellow;mso-highlight:yellow'>worker</span>_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>StartServers<span
+  style='mso-spacerun:yes'>            </span>5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MinSpareThreads<span
+  style='mso-spacerun:yes'>         </span>20</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxSpareThreads<span
+  style='mso-spacerun:yes'>         </span>40</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ThreadsPerChild<span
+  style='mso-spacerun:yes'>         </span>20</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxRequestWorkers<span
+  style='mso-spacerun:yes'>       </span>40</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxConnectionsPerChild<span
+  style='mso-spacerun:yes'>  </span>5000</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ServerLimit<span
+  style='mso-spacerun:yes'>             </span>10</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule mpm_<span
+  style='background:yellow;mso-highlight:yellow'>event</span>_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>StartServers<span
+  style='mso-spacerun:yes'>            </span>20</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MinSpareThreads<span
+  style='mso-spacerun:yes'>         </span>75</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxSpareThreads<span
+  style='mso-spacerun:yes'>        </span>250</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ThreadsPerChild<span
+  style='mso-spacerun:yes'>         </span>25</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxRequestWorkers<span
+  style='mso-spacerun:yes'>     </span>1600</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxConnectionsPerChild<span
+  style='mso-spacerun:yes'>   </span>0</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  mpm_netware_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ThreadStackSize<span
+  style='mso-spacerun:yes'>        </span>65536</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>StartThreads<span
+  style='mso-spacerun:yes'>                </span>250</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MinSpareThreads<span
+  style='mso-spacerun:yes'>         </span>25</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxSpareThreads<span
+  style='mso-spacerun:yes'>        </span>250</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxThreads<span
+  style='mso-spacerun:yes'>                 </span>1000</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxConnectionsPerChild<span
+  style='mso-spacerun:yes'>   </span>0</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  mpm_mpmt_os2_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>StartServers<span
+  style='mso-spacerun:yes'>             </span>2</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MinSpareThreads<span
+  style='mso-spacerun:yes'>          </span>5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxSpareThreads<span
+  style='mso-spacerun:yes'>         </span>10</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxConnectionsPerChild<span
+  style='mso-spacerun:yes'>   </span>0</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  mpm_winnt_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>ThreadsPerChild<span
+  style='mso-spacerun:yes'>        </span>150</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxConnectionsPerChild<span
+  style='mso-spacerun:yes'>   </span>0</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  !mpm_netware_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxMemFree<span
+  style='mso-spacerun:yes'>            </span>2048</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;IfModule
+  mpm_netware_module&gt;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>MaxMemFree<span
+  style='mso-spacerun:yes'>             </span>100</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&lt;/IfModule&gt;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td colspan=3 rowspan=2 valign=top style='vertical-align:top;margin:0in;
+  padding:0pt;width:5.7472in;height:4.277in'>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='background:lime;mso-highlight:lime'>Directives</span> that are
+  implemented by more than one <span style='background:aqua;mso-highlight:aqua'>multi-processing
+  module (MPM)</span></p>
+  <p style='margin:0in'><a
+  href="https://httpd.apache.org/docs/2.4/mod/mpm_common.html"><span
+  style='font-weight:bold;font-family:Arial;font-size:10.5pt;background:white'>mpm_common</span></a></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>01<span
+  style='mso-spacerun:yes'>  </span>CoreDumpDirectory </p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>02<span
+  style='mso-spacerun:yes'>  </span>EnableExceptionHook</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>03<span
+  style='mso-spacerun:yes'>  </span>GracefulShutdownTimeout</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>04<span
+  style='mso-spacerun:yes'>  </span>Listen</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>05<span
+  style='mso-spacerun:yes'>  </span>ListenBackLog</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>06<span
+  style='mso-spacerun:yes'>  </span>ListenCoresBucketsRatio</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>07<span
+  style='mso-spacerun:yes'>  </span>MaxConnectionsPerChild</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>08<span
+  style='mso-spacerun:yes'>  </span>MaxMemFree</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>09<span
+  style='mso-spacerun:yes'>  </span>MaxRequestWorkers</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>10<span
+  style='mso-spacerun:yes'>  </span>MaxSpareThreads</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>11<span
+  style='mso-spacerun:yes'>  </span>MinSpareThreads</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>12<span
+  style='mso-spacerun:yes'>  </span>PidFile</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>13<span
+  style='mso-spacerun:yes'>  </span>ReceiveBufferSize</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>14<span
+  style='mso-spacerun:yes'>  </span>ScoreBoardFile</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>15<span
+  style='mso-spacerun:yes'>  </span>SendBufferSize</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>16<span
+  style='mso-spacerun:yes'>  </span>ServerLimit</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>17<span
+  style='mso-spacerun:yes'>  </span>StartServers</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>18<span
+  style='mso-spacerun:yes'>  </span>StartThreads</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>19<span
+  style='mso-spacerun:yes'>  </span>ThreadLimit</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>20<span
+  style='mso-spacerun:yes'>  </span>ThreadsPerChild</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>21<span
+  style='mso-spacerun:yes'>  </span>ThreadStackSize</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.9277in;
+  height:2.2493in'>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>oracle&gt; <span
+  style='font-weight:bold'>httpd -l</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Compiled in
+  modules:</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>core.c</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>mod_so.c</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>http_core.c</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>List all
+  modules:<span style='mso-spacerun:yes'>  </span><span style='font-weight:
+  bold'>httpd -M</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='font-weight:bold'>httpd -V</span>:</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Server MPM:<span
+  style='mso-spacerun:yes'>     </span>prefork</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>      </span>threaded:<span
+  style='mso-spacerun:yes'>     </span>no</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>           </span>forked:<span
+  style='mso-spacerun:yes'>     </span>yes (variable process count)</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:2.2493in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:2.027in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.2527in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:3.343in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:.3645in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:5.3597in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:5.3597in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td colspan=7 valign=top style='vertical-align:top;margin:0in;padding:0pt;
+  width:9.4979in;height:5.3604in'><img src="apache_mpm_files/image001.jpg"
+  width=908 height=511
+  alt="Machine generated alternative text:&#10;Balanced Apache Tuning Improves Performance and Throughput &#10;Heavy Load &#10;http requests &#10;http requests &#10;http requests &#10;http requests &#10;Removing ServerLimit will &#10;make Apache default to 16, &#10;so a maximum of 16 http &#10;worker processes could be &#10;spawned as demand &#10;increases. Increasing &#10;ServerLimit allows more &#10;httpd.worker processes. &#10;Apache HTTP Server &#10;Fewer threads sharing &#10;more connections &#10;create a better &#10;balance in demand on &#10;OAP connections &#10;Fewer &#10;ThreadsPerChild &#10;reduces the &#10;number of threads &#10;that have to wait in &#10;queue for an open &#10;OAP connection to &#10;help mitigate &#10;contention &#10;WebLogic &#10;Access Server &#10;ID Store &#10;Increasing Max Connections &#10;and AAA Timeout Threshold &#10;help throughput, minimize &#10;busy waiting threads, and &#10;unresponsive connection &#10;resets &#10;Policy &#10;Webgate Definition: &#10;Max Connections 8 &#10;AAA Timeout Threshold 20 &#10;client _ request _ retry _ attempts 2 &#10;htt &#10;htt &#10;htt &#10;htt &#10;Webgate &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;d.worker &#10;64 Threads &#10;LDAP &#10;Database &#10;Increasing retry &#10;attempts may help &#10;threads contacting &#10;a busy Access &#10;Server to try again &#10;before giving up. &#10;Apache Tuning Configurations: &#10;ThreadsPerChild 64 &#10;MaxClients ThreadsPerChild * ServerLimit &#10;MaxClients 512 "></td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:5.3597in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.2527in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:3.343in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:1.1666in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.0312in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:.0312in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:.0312in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.2527in;
+  height:.0312in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:.0312in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td colspan=5 rowspan=3 valign=top style='vertical-align:top;margin:0in;
+  padding:0pt;width:7.6569in;height:5.4201in'><img
+  src="apache_mpm_files/image002.jpg" width=731 height=516
+  alt="Machine generated alternative text:&#10;Apache Prefork Mode &#10;listener &#10;socket &#10;queue &#10;one request/ &#10;process at a time &#10;Apache Worker Mode &#10;httpd &#10;listener &#10;socket &#10;queue &#10;each process &#10;handles multiple &#10;requests, one in &#10;each of its &#10;threads. If all &#10;threads are full in &#10;a process, use an &#10;empty thread in &#10;another process. &#10;httpd.worker &#10;httpd.worker &#10;httpd.worker &#10;additional processes &#10;created to service &#10;simultaneous requests &#10;as necessary &#10;additional processes &#10;can be created if &#10;necessary &#10;thread &#10;thread &#10;thread &#10;thread &#10;thread &#10;thread &#10;httpd.worker &#10;httpd.worker "></td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.4076in;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0201in;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.2527in;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:.5486in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:4.8395in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td colspan=4 rowspan=2 valign=top style='vertical-align:top;margin:0in;
+  padding:0pt;width:5.6097in;height:16.05in'>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>CoreDumpDirectory
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Directory where Apache HTTP Server attempts
+  to switch before dumping core</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>CoreDumpDirectory directory</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>EnableExceptionHook
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Enables a hook that runs exception handlers
+  after a crash</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>EnableExceptionHook On|Off</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>GracefulShutdownTimeout
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Specify a timeout after which a gracefully
+  shutdown server will exit.</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>GracefulShutdownTimeout seconds</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Listen Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>IP addresses and ports that the server
+  listens to</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Listen [IP-address:]portnumber [protocol]</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ListenBackLog
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Maximum length of the queue of pending
+  connections</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ListenBackLog backlog</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ListenCoresBucketsRatio
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Ratio between the number of CPU cores
+  (online) and the number of listeners buckets</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ListenCoresBucketsRatio ratio</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MaxConnectionsPerChild
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Limit on the number of connections that an
+  individual child server will handle during its life</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>MaxConnectionsPerChild number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MaxMemFree
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Maximum amount of memory that the main
+  allocator is allowed to hold without calling free()</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>MaxMemFree KBytes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MaxRequestWorkers
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Maximum number of connections that will be
+  processed simultaneously</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>MaxRequestWorkers number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MaxSpareThreads
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Maximum number of idle threads</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>MaxSpareThreads number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MinSpareThreads
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Minimum number of idle threads available to
+  handle request spikes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>MinSpareThreads number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>PidFile Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>File where the server records the process
+  ID of the daemon</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>PidFile filename</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ReceiveBufferSize
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>TCP receive buffer size</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ReceiveBufferSize bytes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ScoreBoardFile
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Location of the file used to store
+  coordination data for the child processes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ScoreBoardFile file-path</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>SendBufferSize
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>TCP buffer size</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>SendBufferSize bytes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ServerLimit
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Upper limit on configurable number of
+  processes</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ServerLimit number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>StartServers
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Number of child server processes created at
+  startup</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>StartServers number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>StartThreads
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Number of threads created on startup</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>StartThreads number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ThreadLimit
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Sets the upper limit on the configurable
+  number of threads per child process</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ThreadLimit number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ThreadsPerChild
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>Number of threads created by each child
+  process</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ThreadsPerChild number</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>ThreadStackSize
+  Directive</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>The size in bytes of the stack used by
+  threads handling client connections</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>  </span>ThreadStackSize size</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:4.8395in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.1506in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:3.343in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5937in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.927in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.2083in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.5833in;
+  height:11.2104in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>
