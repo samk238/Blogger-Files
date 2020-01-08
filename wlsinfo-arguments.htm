@@ -57,7 +57,7 @@ style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:MaxGCPauseMillis=200
 -XX:+PrintGCDateStamps</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; 
-</SPAN>-Xloggc:/app/oracle/acme/osbdomain/servers/pxvfopw101_osb1/logs/pxvfopw101_osb1_gc.log 
+</SPAN>-Xloggc:/app/oracle/osbdomain/servers/101_osb1/logs/101_osb1_gc.log 
 </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+UseGCLogFileRotation 
@@ -83,7 +83,7 @@ style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-Xverbosetimestamp </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; 
-</SPAN>-Xverboselog:/app/oracle/acme/osbdomain/servers/host1_osb1/logs/host1_osb1_gc.log</P>
+</SPAN>-Xverboselog:/app/oracle/osbdomain/servers/host1_osb1/logs/host1_osb1_gc.log</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
@@ -91,13 +91,13 @@ style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+HeapDumpOnOutOfMemoryError
 </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; 
-</SPAN>-XX:HeapDumpPath=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/hprof-dumps 
+</SPAN>-XX:HeapDumpPath=/app/oracle/osbdomain/servers/host1_osb1/logs/hprof-dumps 
 </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; 
-</SPAN>-XX:FlightRecorderOptions=defaultrecording=true,disk=true,repository=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/flight-recording-data-current,maxsize=6g,maxage=1d,dumponexit=true,dumponexitpath=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/flight-recording-data-history 
+</SPAN>-XX:FlightRecorderOptions=defaultrecording=true,disk=true,repository=/app/oracle/osbdomain/servers/host1_osb1/logs/flight-recording-data-current,maxsize=6g,maxage=1d,dumponexit=true,dumponexitpath=/app/oracle/acme/osbdomain/servers/host1_osb1/logs/flight-recording-data-history 
 </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></P>
@@ -141,7 +141,7 @@ style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>-XX:+UnlockCommercialFeatures
 -XX:+FlightRecorder </P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp;&nbsp; 
-</SPAN>-XX:StartFlightRecording=duration=0s,filename=/app/oracle/acme/osbdomain/servers/pxvfopw101_osb1/logs/pxvfopw101_osb1.jfr,maxage=300s,maxsize=10M</P>
+</SPAN>-XX:StartFlightRecording=duration=0s,filename=/app/oracle/osbdomain/servers/101_osb1/logs/101_osb1.jfr,maxage=300s,maxsize=10M</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
 <P 
 style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">********************************************************************************************************</P>
@@ -191,28 +191,28 @@ style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djrf.version=11.1.1<
 style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger 
 </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Ddomain.home=/app/oracle/acme/osbdomain 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Ddomain.home=/app/oracle/osbdomain 
 </P>
 <P 
 style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Djrockit.optfile=/app/oracle/Middleware/oracle_common/modules/oracle.jrf_11.1.1/jrocket_optfile.txt 
 </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.server.config.dir=/app/oracle/acme/osbdomain/config/fmwconfig/servers/host1_osb1 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.server.config.dir=/app/oracle/osbdomain/config/fmwconfig/servers/host1_osb1 
 </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.domain.config.dir=/app/oracle/acme/osbdomain/config/fmwconfig<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.domain.config.dir=/app/oracle/osbdomain/config/fmwconfig<SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN></P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidbeans.carmlloc=/app/oracle/acme/osbdomain/config/fmwconfig/carml<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidbeans.carmlloc=/app/oracle/osbdomain/config/fmwconfig/carml<SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN></P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidstack.home=/app/oracle/acme/osbdomain/config/fmwconfig/arisidprovider 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Digf.arisidstack.home=/app/oracle/osbdomain/config/fmwconfig/arisidprovider 
 </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.security.jps.config=/app/oracle/acme/osbdomain/config/fmwconfig/jps-config.xml 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.security.jps.config=/app/oracle/osbdomain/config/fmwconfig/jps-config.xml 
 </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.deployed.app.dir=/app/oracle/acme/osbdomain/servers/host1_osb1/tmp/_WL_user 
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.deployed.app.dir=/app/oracle/osbdomain/servers/host1_osb1/tmp/_WL_user 
 </P>
 <P 
 style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">-Doracle.deployed.app.ext=/- 
