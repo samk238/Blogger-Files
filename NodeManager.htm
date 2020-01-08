@@ -64,7 +64,7 @@ issues"</SPAN></P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="BACKGROUND: aqua; mso-highlight: aqua">nm_password.properties:</SPAN></P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p6api_domain\config\nodemanager</P>
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p_domain\config\nodemanager</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">check username and 
 password or update as needed</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
@@ -80,7 +80,7 @@ style="BACKGROUND: aqua; mso-highlight: aqua">domains</SPAN> and
 nodemanager.<SPAN 
 style="BACKGROUND: aqua; mso-highlight: aqua">properties</SPAN></P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p6api_domain\nodemanager</P>
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p_domain\nodemanager</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">check for domain 
 dir path</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">In properties 
@@ -95,7 +95,7 @@ domain directory</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="BACKGROUND: aqua; mso-highlight: aqua">config.xml</SPAN></P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p6api_domain\config</P>
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\user_projects\domains\p_domain\config</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="FONT-WEIGHT: bold">search:</SPAN> node-manager</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
@@ -109,14 +109,14 @@ style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">D:\apps\wlshome\oracl
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
 style="BACKGROUND: aqua; mso-highlight: aqua">startNodeManager</SPAN>(verbose='true', 
-NodeManagerHome='D:\\apps\\wlshome\\user_projects\\domains\\p6api_domain\\nodemanager', 
-ListenPort='5556′, ListenAddress='10.84.9.60')</P>
+NodeManagerHome='D:\\apps\\wlshome\\user_projects\\domains\\p_domain\\nodemanager', 
+ListenPort='5556′, ListenAddress='100.8.9.6')</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">connect:</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
 style="BACKGROUND: aqua; mso-highlight: aqua">nmConnect</SPAN>('weblogic', 
-'weblogic1', '10.84.9.60', '5556', 'p6api_domain', 
-'D:\\apps\\wlshome\\user_projects\\domains\\p6api_domain', 'plain')</P>
+'weblogic1', '100.8.9.6', '5556', 'p_domain', 
+'D:\\apps\\wlshome\\user_projects\\domains\\p_domain', 'plain')</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN></P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">6)</P>
@@ -128,11 +128,10 @@ is having similar configurations: ListenAddress, ListenPort, SecureListener</P>
 ways:</P>
 <P 
 style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">nmConnect(username=soa_domain_admin, 
-password=passwordl, host=unixserver1, port=5557, 
-domainName=ohs1_domain, domainDir=/opt/oracle/admin/ohs1_domain, nmType=SSL) 
-</P>
+password=password1, host=unixhost1, port=5557, domainName=ohs1_domain, 
+domainDir=/opt/oracle/admin/ohs1_domain, nmType=SSL) </P>
 <P 
-style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">nmConnect('user1','password1','serverhost','5556','soa_domain','/opt/oracle/admin/soa_domain/aserver/soa_domain','ssl')</P>
+style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">nmConnect('user1','password1','unixhost1','5556','soa_domain','/opt/oracle/admin/soa_domain/aserver/soa_domain','ssl')</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="FONT-WEIGHT: bold">nmStart</SPAN>('AdminServer')</P>
@@ -156,10 +155,10 @@ style="mso-spacerun: yes">&nbsp;
 style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>or java weblogic.WLST</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
-style="FONT-WEIGHT: bold">connect</SPAN>('weblogic','weblogic1','t3://10.84.9.60:7001')</P>
+style="FONT-WEIGHT: bold">connect</SPAN>('weblogic','weblogic1','t3://100.8.9.6:7001')</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
-style="FONT-WEIGHT: bold">nmEnroll</SPAN>('D:\\apps\\wlshome\\user_projects\\domains\\p6api_domain','D:\\apps\\wlshome\\user_projects\\domains\\p6api_domain\\nodemanager')</P>
+style="FONT-WEIGHT: bold">nmEnroll</SPAN>('D:\\apps\\wlshome\\user_projects\\domains\\p_domain','D:\\apps\\wlshome\\user_projects\\domains\\p_domain\\nodemanager')</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><SPAN 
 style="mso-spacerun: yes">&nbsp; </SPAN><SPAN 
 style="FONT-WEIGHT: bold">exit</SPAN>()</P>
@@ -190,7 +189,7 @@ style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </SPAN>exit()</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
 <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
-<P style="MARGIN: 0in"><IMG src="NodeManager_files/mht7FE(1).tmp" width=777 
+<P style="MARGIN: 0in"><IMG src="NodeManager_files/mhtC6A(1).tmp" width=777 
 height=523></P></DIV></DIV></DIV>
 <DIV>
 <P style="MARGIN: 0in">&nbsp;</P>
